@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les listes et les liens en HTML</title>
+</head>
+<body>
+
+    <h1>Les listes et les liens en HTML</h1>
+
+    <h2>les balises pour faire des listes</h2>
+    
+    <h3>les listes non-ordonnées : ul (non-ordered list)</h3>
+
+    <ul>
+        <li>un élément de liste</li>
+        <li>un autre élément de liste</li>
+        <li>encore un autre élément de liste</li>
+    </ul>
+
+    <h3>les listes ordonnées : ol (ordered list)</h3>
+
+    <ol type="A">
+        <li>un élément de liste</li>
+        <li>un autre élément de liste</li>
+        <li>encore un autre élément de liste</li>
+    </ol>
+
+    <h3>les listes de description : dl (description list)</h3>
+
+    <dl>
+        <dt>Description Term</dt>
+        <dd>Description Data</dd>
+
+        <dt>HTML</dt>
+        <dd>HyperText Mark-up Language</dd>
+    </dl>
+
+    <h3>Les liens en HTML :</h3>
+
+    <!-- accéder à une url absolue -->
+    <a href="https://validator.w3.org/">Accéder au validateur du W3C</a>
+
+    <br><br>
+
+    <!-- on peut faire s'ouvrir la page web du lien dans un autre onglet avec l'attribut target -->
+    <!-- pour éviter les problèmes de sécurité causés par l'attribut target, il faut ajouter :
+        rel="noopener noreferrer"
+    -->
+
+    <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Consulter la doc de MDN </a> 
+    
+    <br><br>
+
+    <!-- accéder à un endroit précis de la page : 
+        - donner un id à l'élément auquel on veut accéder dans la page
+        - renseigner dans le href du lien : # + nom de l'id
+    
+    -->
+    <a href="#haut-de-page">aller en haut de la page</a>
+
+    <br><br>
+
+    <!-- accéder à un fichier (pdf, photo...) -->
+    <a href="html-icon-64.png">accéder à l'icône HTML 5</a>
+
+    <br><br>
+
+    <!-- on peut obliger à télécharger le document pour pouvoir le consulter avec l'attribut download -->
+    <a href="Express-Thai-Resto-Menu.pdf" download="SUPER MENU THAI">télécharger le menu Thaï</a>
+
+    <br><br>
+
+    <!-- on peut envoyer un mail -->
+    <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_mailto_subject -->
+    <a href="mailto:support-technique@greta.fr">Envoyez-nous un mail</a>
+
+    <br><br>
+
+    <!-- on peut proposer de passer un appel -->
+    <a href="tel:+33139810687">Passez-nous un petit coup de fil</a>
+
+    <a href="Express-Thai-Resto-Menu.pdf" download rel="noopener noreferrer" target="_blank">Charger pdf</a>
+
+    <br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  _padding-top: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body main {
+  margin: 60px 0;
+  margin-bottom: 0px;
+  padding: 50px;
+  _margin-left: 50px;
+}
+body main #Home div div {
+  _justify-content: center;
+  _align-items: center;
+  display: inline-flex;
+}
+body main #Home div div:nth-child(2) {
+  _margin-left: 10px;
+}
+body #nav {
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  display: inline-flex;
+  position: fixed;
+  _flex-direction: row;
+  border-bottom: 1px black solid;
+  _margin-right: 10px;
+  width: 100%;
+  float: left;
+  margin: 0 0 1em 0;
+  padding: 0;
+  background-color: white;
+}
+body #nav a {
+  _opacity: 100%;
+  margin: 0 auto;
+  text-decoration: inherit;
+  padding: 0;
+}
+body #nav a::first-letter {
+  text-transform: capitalize;
+}
+body #nav a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+body footer #footerPart1 {
+  _padding-top: 90px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  _align-content: center;
+}
+body footer #footerPart1 a {
+  text-decoration: inherit;
+  padding: 0;
+}
+body footer #footerPart1 a::first-letter {
+  text-transform: capitalize;
+}
+body footer #footerPart1 a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+body footer #footerPart1 li {
+  list-style-type: none;
+}
+body footer #upArrow {
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+body footer #footerPart2 {
+  text-transform: capitalize;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

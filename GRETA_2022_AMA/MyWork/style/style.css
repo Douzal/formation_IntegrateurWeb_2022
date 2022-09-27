@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+  background-color: rgba(65, 168, 130, 0.862745098);
+  font-family: lato, verdana;
+  /* Ajoute une flèche devant les liens */
+}
+body h1 {
+  text-decoration: underline overline;
+  color: rgba(20, 43, 34, 0.6588235294);
+}
+body h1::first-letter {
+  text-transform: capitalize;
+}
+body h2 {
+  text-decoration: underline;
+}
+body h2::first-letter {
+  text-transform: capitalize;
+}
+body .indent {
+  text-indent: 30px;
+}
+body a:before {
+  content: "→ ";
+}
+body blockquote:after {
+  content: " :";
+}/*# sourceMappingURL=style.css.map */

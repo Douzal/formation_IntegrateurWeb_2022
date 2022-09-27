@@ -1,0 +1,45 @@
+<!-- je précise au navigateur la version de HTML utilisée -->
+<!DOCTYPE html>
+
+<!-- html : élément racine qui contient l'ensemble de la page web -->
+<html lang="fr">
+
+    <head>
+
+        <!-- head : le cerveau de la page web : ce qui sert à la faire fonctionner -->
+
+        <title>le titre de la page</title>
+
+    </head>
+
+
+    <body>
+        
+        <!-- body : le corps de la page web : tout le contenu qui va s'afficher dans le navigateur -->
+
+        <p title="information sur l'élément">du texte dans ma page web</p>
+
+
+        <!-- LES IMAGES -->
+
+        <!-- 
+            
+            - toujours renseigner l'attibut alt 
+            (contenu alternatif pour : 
+            problème technique / lecteurs d'écrans / SEO) 
+        
+            - fournir la bonne taille d'image pour ne pas demander au navigateur de la redimensionner (-> problème de performance)
+
+        -->
+
+
+
+        <!-- afficher une image à partir d'une url absolue -->
+        <img src="http://picsum.photos/400/201" alt="une image aléatoire">
+
+        <!-- afficher une image à partir d'une url relative -->
+        <img src="img/night-road-640.jpg" alt="une route la nuit" loading="lazy">
+
+    </body>
+
+</html>

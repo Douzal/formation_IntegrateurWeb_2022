@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le contenu multimedia en HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    
+    <!-- la balise figure permet d'indiquer une ou plusieurs illustrations (images, logos, tableaux, graphiques -->
+    <figure>
+        <img src="orange-sunset.jpg" alt="un coucher de soleil orange" width="400">        
+        <img src="pink-sunset.jpg" alt="un coucher de soleil rose" width="400" height="250"> 
+        <figcaption>de magnifiques couchers de soleil</figcaption>    
+    </figure>
+
+
+    <!-- la balise picture permet de proposer différentes images selon la largeur d'écran sur lequel est consultée la page web -->
+    <picture>
+        <source srcset="orange-sunset.jpg" media="(max-width:600px)" width="400">
+        <img src="pink-sunset.jpg" alt="un coucher de soleil orange" width="400"> 
+    </picture>
+
+
+    <!-- contenu audio : ne pas oublier l'attribut controls -->
+    <!-- il est recommandé de proposer différents formats -->
+
+    <audio src="rain-and-thunder-sound.mp3" controls>
+        <p>votre navigateur ne prend pas en charge l'audio. Voici un <a href="rain-and-thunder-sound.mp3">lien pour le télécharger</a></p>
+    </audio>
+
+    <audio controls>
+        <source src="rain-and-thunder-sound.mp3" type="audio/mp3">
+        <source src="rain-and-thunder-sound.mpeg" type="audio/mpeg">
+        <source src="rain-and-thunder-sound.ogg" type="audio/ogg">
+    </audio>
+
+
+    <!-- contenu vidéo : ne pas oublier l'attribut controls -->
+    <!-- il est recommandé de proposer différents formats -->
+    <!-- l'attribut poster permet d'afficher une photo au debut de la video -->
+
+    <video src="pluie.mp4" controls width="400" poster="orange-sunset.jpg">        
+        <p>votre navigateur ne prend pas en charge la video. Voici un <a href="pluie.mp4">lien pour la télécharger</a></p>
+    </video>
+
+    <video controls>
+        <source  src="pluie.mp4" type="video/mp4">
+        <source  src="pluie.webm" type="video/webm">
+    </video>
+
+    <!-- contenu iframe : afficher une miniature web d'un service (API) : Youtube - Maps -->
+
+    <!-- vidéo youtube : partager / intégrer / copier -->
+    <iframe width="860" height="315" src="https://www.youtube.com/embed/f0X1Tl8aHtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    
+    <!-- miniature maps : partager / intégrer / copier le contenu HTML -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.3228218911045!2d2.3247037155330803!3d48.871122179288754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e338e34cebb%3A0xf236a49e893ff890!2sButcher!5e0!3m2!1sfr!2sfr!4v1664288929863!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <br><br>
+
+    <!-- les icônes -->
+    <!-- bibliothèque d'icônes : https://fontawesome.com/ -->
+    <!-- faire le lien avec cette bibliothèque avec une balise link dans le head -->
+    <!-- récupérer les balises i de chaque icône dans la bibliothèque -->
+
+    <i class="fa-solid fa-laptop-code"></i>
+
+    <!-- transformer l'icône en lien -->
+    <a href="https://fr-fr.facebook.com/">
+        <i class="fa-brands fa-square-facebook"></i>
+    </a>
+        
+    <i class="fa-brands fa-square-twitter"></i>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- on peut avoir le squelette de la page avec emmet : "html:5" mais aussi avec "!" -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rappels du J1</title>
+
+    <!-- ajout d'une favicon dans l'onglet !
+         shortcut "link:fav" -->
+    <link rel="shorcut icon" href="../img/icon_happySandwich.png" type="img/png">
+
+    <!-- ajout du CSS -->
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <!-- ajouté via js -->
+    <span id="menu"></span>
+    
+    <!-- h1 titre le plus important, à l'époque la bonne pratique de n'en avoir qu'un par page -->
+    <h1>titre le plus important</h1>
+    <h6>titre le moins important</h6>
+    <p>paragraphe, avec un <br />saut de ligne
+        (balise orpheline, autrefois obligatoirement autofermante, maintenant plus obligatoirement.</p>
+
+    <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Rappels emmet</a>
+    <p>Notamment en écrivant p#monId.maClasse on crée le p avec # et . adéquat</p>
+
+    <!-- figure + caption pour avoir une image avec légende -->
+    <figure>
+        <!-- loading="lazy" pour chargement uniquement quand arrivée dans le viewport
+            (default : tout charge dès chargement de la page) -->
+        <img src="https://picsum.photos/300/400?grayscale" alt="une image générée par picsum" loading="lazy">
+        <figcaption>Légende de la photo.</figcaption>
+    </figure>
+
+    <a href="https://icon-icons.com/fr/" target="_blank">Un site d'icônes</a>
+
+    <h2>Générer un texte aléatoier : taper Lorem et entrer</h2>
+    <p>
+        On tape "loremN" où N est le nombre de mots désirés, ex avec 5 :
+        Lorem ipsum dolor sit amet.
+    </p>
+    <hr />
+    <h2>Ecrire en abbrégé avec " > "</h2>
+    <p><blockquote>p>lorem20</blockquote> crée un paragraphe, avec dedans lorem20.</p>
+    <p>Entre accolades pour entrer son propre contenu texte : <blockquote>p>{mon texte}</blockquote></p>
+    <h2>Balises permettant de renseigner l'importance d'un mot ou groupe de mots</h2>
+    <h3>la balise strong</h3>
+    <p>Lorem ipsum <strong>dolor sit amet.</strong></p>
+    <h3>la balise em</h3>
+    <p>Lorem ipsum <em>dolor sit amet.</em></p>
+    <h3>la balise mark</h3>
+    <p>Lorem ipsum <mark>dolor sit amet.</mark></p>
+
+    <h3>Ordered list</h3>
+    <ol type="a" title="une liste">
+        <li>li 1</li>
+        <li>li 2</li>
+        <li>li 3</li>
+    </ol>
+
+    <dl>
+        <dt>Description term</dt>
+        <dd>Description Data</dd>
+
+        <dt>HTML</dt>
+        <dd>Hypertext Markup Language</dd>
+    </dl>
+
+    <!-- rel="noopener noreferrer" permet de sécuriser les target="_blank" -->
+    <a href="../docs/CV_épuré-AlexisMasson.pdf" rel="noopener noreferrer" target="_blank">Ouvrir pdf</a><br>
+    <!-- download est censé proposer de download le pdf, ne marche pas si mauvaise conf du navigateur -->
+    <a href="../docs/CV_épuré-AlexisMasson.pdf" download rel="noopener noreferrer" target="_blank">Charger pdf</a>
+
+
+    <!-- scripts-->
+    <!-- jQuery + mon script-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="ProjectGeoloc.js" ></script> -->
+    <script type="text/javascript" src="..\script\script.js"></script>
+</body>
+</html>
