@@ -1,10 +1,10 @@
-$(function() {
+$(function () {
     'use strict';
     // console.warn('jquery ready');
 
     // set the good section visible
 
-    /* FUNCTIONS */   
+    /* FUNCTIONS */
     let init = function () {
         bindClick();
     };
@@ -15,22 +15,22 @@ $(function() {
         console.group();
         console.log(`clickedPage : ${clickedPage}`);
 
-        for(let nomPage of allNames) {
+        for (let nomPage of allNames) {
             // set to hidden
-            $("#"+nomPage).css("display", "none");
-            
+            $("#" + nomPage).css("display", "none");
+
             // console.log(`nomPage : ${nomPage}\nallNames[clickedPage] : ${allNames[clickedPage]}`);
             // console.warn(nomPage === allNames[clickedPage]);
-            if(nomPage === allNames[clickedPage]) {
+            if (nomPage === allNames[clickedPage]) {
 
-                $("#"+nomPage).css("display", "block");
+                $("#" + nomPage).css("display", "block");
             }
         }
         console.groupEnd();
     }
 
     let bindClick = function () {
-        $('#nav a').click(function(e) {
+        $('#nav a').click(function (e) {
             // get the a clicked
             let id = $(this).attr("id");
             id = id.substring(1);

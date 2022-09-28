@@ -1,9 +1,11 @@
-$navHeigh : 60px;
+$navHeigh : 100px;
 $paddingMain : 50px;
+$colorPink : rgba(255, 143, 148, 255); // https://imagecolorpicker.com/
 
 body {
     _padding-top: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     //_background-color: white;
     // #nav{
     //     display: flex;
@@ -22,12 +24,51 @@ body {
         margin-bottom: 0px;
         padding: $paddingMain;
         _margin-left: $paddingMain;
+
         #Home {
+            #homeContent {
+                margin: 2em 0;
+                padding: 2em 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                _align-items: center;
+
+                // a travailler
+                #homeContent_fav i {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+        }
+
+        #Blog {
+            #blogContent {
+                p {
+                    &.blogTitle {
+                        font-size: 1.5em;
+                        font-weight: bold;
+                    }
+
+                    &.blogSignat {
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        #About {
             div {
+
                 div {
                     _justify-content: center;
                     _align-items: center;
                     display: inline-flex;
+
                     &:nth-child(2) {
                         _margin-left: 10px;
                         // background-color: black;
@@ -35,12 +76,12 @@ body {
                 }
             }
         }
-        
+
     }
 
-    #nav{
+    #nav {
         top: 0px;
-        justify-content: center;
+        _justify-content: center;
         align-items: center;
         height: $navHeigh;
         display: inline-flex;
@@ -48,62 +89,147 @@ body {
         _flex-direction: row;
         border-bottom: 1px black solid;
         _margin-right: 10px;
-        width: 100%;
-        float: left;
-        margin: 0 0 1em 0;
-        padding: 0;
+        width: 99%;
+        _float: left;
+        _margin: 0 0 1em 0;
+        _padding: 0;
+        _padding-right: 10px;
         background-color: white;
+        opacity: 0.8;
+
         a {
             _opacity: 100%;
             margin: 0 auto;
             text-decoration: inherit;
             padding: 0;
+
             &::first-letter {
                 text-transform: capitalize;
             }
+
             &:visited {
                 text-decoration: inherit;
                 color: inherit;
             }
         }
     }
+
     footer {
         #footerPart1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
             _padding-top: $navHeigh*1.5;
-            justify-content: center;
+            _justify-content: center;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
             display: inline-flex;
             _align-content: center;
+
+            #contact,
+            #legal {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                _margin: 2em;
+
+                li {
+                    margin: 3em 0;
+
+                    & i {
+                        _height: 50px;
+                        _width: 50px;
+                    }
+                }
+
+                #legalMentions li {
+                    margin: 2em 0;
+
+                    &:first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+
+                #legalIcons li {
+                    margin: 3em 0;
+                    _height: 50px;
+                    _width: 50px;
+                }
+
+                #legalIcons {
+                    _display: flex;
+                    _flex-direction: row;
+                }
+            }
+
             a {
                 text-decoration: inherit;
+                color: black;
                 padding: 0;
+
                 &::first-letter {
                     text-transform: capitalize;
                 }
+
                 &:visited {
-                    text-decoration: inherit;
-                    color: inherit;
+                    _text-decoration: inherit;
+                    _color: black;
                 }
             }
+
             li {
                 list-style-type: none;
+                _margin: 0 2em;
+                _padding: 0 2em;
             }
         }
+
         #upArrow {
-            justify-content: center;
+            _justify-content: center;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            display: inline-flex;
+            margin: auto;
+
+            i {
+                text-decoration: none;
+
+                &:visited {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
         }
+
         #footerPart2 {
             text-transform: capitalize;
             text-align: center;
         }
     }
 
-    // .visible {
-    //     visibility: visible;
-    // }
-    // .hidden {
-    //     visibility: hidden;
-    // }
+    // GENERAL
+    #joinUs,
+    #ourBlog,
+    #aboutUs {
+        font-family: Satisfy, Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 3em;
+        width: 100%;
+
+        p {
+            color: $colorPink;
+            text-align: center;
+            width: 100%;
+            margin-top: 0em;
+            margin-bottom: 2em;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+
+        }
+    }
 }

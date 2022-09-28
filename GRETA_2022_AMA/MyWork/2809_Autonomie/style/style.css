@@ -3,34 +3,59 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body main {
-  margin: 60px 0;
+  margin: 100px 0;
   margin-bottom: 0px;
   padding: 50px;
   _margin-left: 50px;
 }
-body main #Home div div {
+body main #Home #homeContent {
+  margin: 2em 0;
+  padding: 2em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  _align-items: center;
+}
+body main #Home #homeContent #homeContent_fav i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body main #Blog #blogContent p.blogTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+body main #Blog #blogContent p.blogSignat {
+  text-align: right;
+  font-weight: bold;
+}
+body main #About div div {
   _justify-content: center;
   _align-items: center;
   display: inline-flex;
 }
-body main #Home div div:nth-child(2) {
+body main #About div div:nth-child(2) {
   _margin-left: 10px;
 }
 body #nav {
   top: 0px;
-  justify-content: center;
+  _justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 100px;
   display: inline-flex;
   position: fixed;
   _flex-direction: row;
   border-bottom: 1px black solid;
   _margin-right: 10px;
-  width: 100%;
-  float: left;
-  margin: 0 0 1em 0;
-  padding: 0;
+  width: 99%;
+  _float: left;
+  _margin: 0 0 1em 0;
+  _padding: 0;
+  _padding-right: 10px;
   background-color: white;
+  opacity: 0.8;
 }
 body #nav a {
   _opacity: 100%;
@@ -46,32 +71,108 @@ body #nav a:visited {
   color: inherit;
 }
 body footer #footerPart1 {
-  _padding-top: 90px;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  _padding-top: 150px;
+  _justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   display: inline-flex;
   _align-content: center;
 }
+body footer #footerPart1 #contact,
+body footer #footerPart1 #legal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  _margin: 2em;
+}
+body footer #footerPart1 #contact li,
+body footer #footerPart1 #legal li {
+  margin: 3em 0;
+}
+body footer #footerPart1 #contact li i,
+body footer #footerPart1 #legal li i {
+  _height: 50px;
+  _width: 50px;
+}
+body footer #footerPart1 #contact #legalMentions li,
+body footer #footerPart1 #legal #legalMentions li {
+  margin: 2em 0;
+}
+body footer #footerPart1 #contact #legalMentions li:first-letter,
+body footer #footerPart1 #legal #legalMentions li:first-letter {
+  text-transform: capitalize;
+}
+body footer #footerPart1 #contact #legalIcons li,
+body footer #footerPart1 #legal #legalIcons li {
+  margin: 3em 0;
+  _height: 50px;
+  _width: 50px;
+}
+body footer #footerPart1 #contact #legalIcons,
+body footer #footerPart1 #legal #legalIcons {
+  _display: flex;
+  _flex-direction: row;
+}
 body footer #footerPart1 a {
   text-decoration: inherit;
+  color: black;
   padding: 0;
 }
 body footer #footerPart1 a::first-letter {
   text-transform: capitalize;
 }
 body footer #footerPart1 a:visited {
-  text-decoration: inherit;
-  color: inherit;
+  _text-decoration: inherit;
+  _color: black;
 }
 body footer #footerPart1 li {
   list-style-type: none;
+  _margin: 0 2em;
+  _padding: 0 2em;
 }
 body footer #upArrow {
-  justify-content: center;
+  _justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  display: inline-flex;
+  margin: auto;
+}
+body footer #upArrow i {
+  text-decoration: none;
+}
+body footer #upArrow i:visited {
+  text-decoration: none;
+  color: black;
 }
 body footer #footerPart2 {
   text-transform: capitalize;
   text-align: center;
+}
+body #joinUs,
+body #ourBlog,
+body #aboutUs {
+  font-family: Satisfy, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3em;
+  width: 100%;
+}
+body #joinUs p,
+body #ourBlog p,
+body #aboutUs p {
+  color: rgb(255, 143, 148);
+  text-align: center;
+  width: 100%;
+  margin-top: 0em;
+  margin-bottom: 2em;
+}
+body #joinUs p::first-letter,
+body #ourBlog p::first-letter,
+body #aboutUs p::first-letter {
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */
