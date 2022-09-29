@@ -12,18 +12,21 @@ $(function () {
     function makeVisible(id) {
         let allNames = ['Home', 'Blog', 'Add', 'About'];
         let clickedPage = allNames.indexOf(id);
+        let colorPink = 'rgba(255, 143, 148, 255)';
         console.group();
-        console.log(`clickedPage : ${clickedPage}`);
+        // console.log(`clickedPage : ${clickedPage}`);
 
         for (let nomPage of allNames) {
             // set to hidden
             $("#" + nomPage).css("display", "none");
+            // change onglet's color
+            $("#a" + nomPage).css("color", 'black');
 
             // console.log(`nomPage : ${nomPage}\nallNames[clickedPage] : ${allNames[clickedPage]}`);
             // console.warn(nomPage === allNames[clickedPage]);
             if (nomPage === allNames[clickedPage]) {
-
                 $("#" + nomPage).css("display", "block");
+                $("#a" + nomPage).css("color", colorPink);
             }
         }
         console.groupEnd();
