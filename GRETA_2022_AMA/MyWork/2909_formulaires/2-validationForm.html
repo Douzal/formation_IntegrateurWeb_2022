@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Validation des données</title>
+        <!-- favicon onglet-->
+        <link rel="shortcut icon" href="../img/img-nuts2-501x285.jpg" type="image/png" />
+        <!-- CDN favison FontAwesome-->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+        <!-- CSS -->
+        <!-- <link rel="stylesheet" href="./style/style.css" /> -->
+
+        <!-- FONT GOOGLE -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Crete+Round&family=Lato:wght@100&family=Limelight&family=Satisfy&display=swap" rel="stylesheet"> -->
+    </head>
+    <body>
+
+        <!-- FORMULAIRE -->
+        <form action="formAction.html">
+            <!-- on peut préciser un interval de lettre min à fournir à chps de texte -->
+            <label for="pren">Prénom * : </label>
+            <input type="text" minlength="3" maxlength="10" id="pren" name="pren" required placeholder="Prenom.."><br>
+            <label for="age">Age approximatif * :</label>
+            <!-- nb :  required="false" marche pas... -_- -->
+            <input type="number" id="age" name="age" min="0" max="150" step="5" required />
+            <hr>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        
+        <!-- jQuery + mon script-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="ProjectGeoloc.js" ></script> -->
+        <!-- scripts-->
+        <script type="text/javascript" src=".\script\script.js"></script>
+    </body>
+</html>

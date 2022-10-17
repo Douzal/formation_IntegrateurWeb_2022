@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La validation des données en HTML</title>
+</head>
+<body>
+    
+    <form>
+
+        <!-- required oblige la saisie d'un champ -->
+        <label>votre nom * :</label>
+        <input type="text" required >
+
+        <br><br>
+
+        <!-- pour du texte : on peut préciser des tailles minimum et maximum -->
+        <input type="text" minlength="4" maxlength="10" placeholder="votre pseudo">
+
+        <!-- pour des nombres : on peut préciser des nombres minimum et maximum -->
+        <!-- avec step, on peut choisir un intervalle -->
+        <label>votre experience :</label>
+        <input type="number" min="0" max="10" step="2">
+
+        <br><br>
+
+        <!-- on peut préciser les types de fichier -->
+        <input type="file" accept=".png">
+
+
+        <br><br>
+
+        <!-- on peut préciser les types et nombres de caractères attendus avec l'attribut pattern -->
+        <!-- on utilisera des expressions régulières  
+        https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+        https://regexr.com/3e48o -->
+        <!-- ici : on attend au minimum trois chiffres entre 0 et 9 -->
+        <input type="tel" pattern="[0-9]{3}" placeholder="votre telephone">
+
+        <br><br>
+
+        <button type="submit">Envoyer</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Spice&family=Crete+Round&family=Lato:wght@100&family=Limelight&family=Satisfy&display=swap");
+@font-face {
+  font-family: "SilkGF_reg";
+  src: url("../../font/Silkscreen-Regular.ttf");
+}
+@font-face {
+  font-family: "SilkGF_bold";
+  src: url("../../font/Silkscreen-Bold.ttf");
+}
+body {
+  background-color: #aec9cb;
+  font-family: "Lato", "SilkGF_bold";
+  color: #0d2530;
+  text-align: start;
+}
+body p {
+  font-size: 1em;
+  font-size: 20px;
+}
+body h3 + p {
+  color: #0d2530;
+}
+body h3 + p:before {
+  content: "    ";
+}
+body a {
+  font-style: none;
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

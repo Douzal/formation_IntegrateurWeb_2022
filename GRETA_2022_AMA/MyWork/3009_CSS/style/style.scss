@@ -1,0 +1,41 @@
+// from Google Font (avoid CDN)
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Spice&family=Crete+Round&family=Lato:wght@100&family=Limelight&family=Satisfy&display=swap');
+
+// import font from folder
+@font-face {
+    font-family: 'SilkGF_reg';
+    src: url('../../font/Silkscreen-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SilkGF_bold';
+    src: url('../../font/Silkscreen-Bold.ttf');
+}
+
+$baseColor  : #aec9cb;// #00ffa2;
+$parColor   : #0d2530;
+body {
+    background-color: $baseColor;
+    font-family: 'Lato', 'SilkGF_bold';
+    color: $parColor;
+    text-align: start;
+
+    p {
+        font-size: 1em;
+        font-size: 20px;
+    }
+
+    // premier p, après un h3 (dans body)
+    h3+p {
+        color: $parColor;
+        &:before {
+            // or text-indent... \00a0 équivaut au &nbsp; mais dans le CSS, en gros.
+            content: "\00a0 \00a0 \00a0 \00a0 ";
+        }
+    }
+    a {
+        font-style: none;
+        text-decoration: none;
+        color: black;
+    }
+}

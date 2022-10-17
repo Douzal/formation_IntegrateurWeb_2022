@@ -1,0 +1,14 @@
+
+/* le sélecteur le plus simple est le nom de la balise HTML */
+
+/* tous les éléments p seront concernés */
+p {
+    background-color: black;
+    color: white; 
+}
+
+/* on peut cibler plusieurs éléments en même temps */
+strong, em, mark {
+    color: orange;
+}
+

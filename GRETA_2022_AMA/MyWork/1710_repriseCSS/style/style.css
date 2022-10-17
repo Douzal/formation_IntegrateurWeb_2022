@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Bungee+Spice&family=Crete+Round&family=Holtwood+One+SC&family=Lato:wght@100&family=Limelight&family=Satisfy&display=swap");
+@font-face {
+  font-family: "SilkGF_reg";
+  src: url("../../font/Silkscreen-Regular.ttf");
+}
+@font-face {
+  font-family: "SilkGF_bold";
+  src: url("../../font/Silkscreen-Bold.ttf");
+}
+body {
+  color: grey;
+}
+body h1 {
+  color: aquamarine;
+  border: 0.1em solid aquamarine;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 0 10px aquamarine;
+}
+body h1::first-letter {
+  text-transform: capitalize;
+}
+body h2 {
+  margin-top: 70px;
+  text-decoration: underline;
+}
+body h2::first-letter {
+  text-transform: capitalize;
+}
+body ul {
+  line-height: 1.3;
+  margin-bottom: 70px;
+}
+body ul li::first-letter {
+  text-transform: capitalize;
+}
+body p {
+  color: orange;
+  font-weight: bold;
+  font-size: 1.3em;
+  border-radius: 10px;
+  _border: 0px solid grey;
+  padding: 20px;
+  box-shadow: 0 0 10px grey;
+}
+body p span {
+  color: aquamarine;
+}
+body p span::first-letter {
+  text-transform: capitalize;
+}
+body p span a {
+  color: inherit;
+  text-decoration: inherit;
+  font-style: italic;
+}
+body p::first-letter {
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */

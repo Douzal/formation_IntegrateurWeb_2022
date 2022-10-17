@@ -1,0 +1,86 @@
+main, article, aside {
+    border: 3px solid grey;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* cibler un élément avec le nom de la balise */
+
+h1 {
+    background-color:#008080;
+    padding: 10px;
+    text-align: center;
+}
+
+/* cibler plusieurs éléments en les séparant par une virgule */
+
+h1, p {
+    font-style: italic;
+}
+
+/* sélecteur universel * cible chaque élément présent dans la page 
+
+* {
+    border: 3px solid grey;
+} 
+
+*/
+
+/* une classe avec le point */
+.middle-title {
+    text-decoration: underline;
+}
+
+/* cibler un id avec le # */
+#top-of-page {
+    color: #f5f5f5;
+}
+
+/* cibler un élément enfant ou petit enfant, etc (contenu dans un autre élément) */
+
+main article p {
+    color: #ffa500;
+}
+
+/* cibler un enfant direct */
+main > p {
+    color: #ff69b4;
+}
+
+/* cibler un élément qui vient directement après un autre */
+aside + p {
+    text-transform: uppercase;
+}
+
+/* cibler tous les éléments venant après un élément */
+aside ~ p {
+    text-shadow: 0 0 2px black;
+}
+
+
+/* Les priorités en CSS */
+/* 
+pour qu'une règle de style soit prioritaire, il faut ajouter des précisions dans la sélection de l'élément
+selon les précisions (classe, id, attribut), la priorité sera plus ou moins forte
+(un id est plus spécifique qu'une classe qui est plus spécifique que juste le nom de l'élément)
+*/
+
+/* degré de spécificité : 100 */
+#testeur {
+    color: #ffa500;
+}
+
+/* degré de spécificité : 010 */
+.little-title {
+    color: green;
+}
+
+/* degré de spécificité : 002 */
+p + h4 {
+    color: #0000ff;
+}
+
+/* degré de spécificité : 001 */
+h4 {
+    color: #b22222;
+}

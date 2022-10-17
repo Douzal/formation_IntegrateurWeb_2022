@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires en HTML</title>
+</head>
+<body>
+    
+    <form action="formConfirm.html">
+
+
+        <!--
+        - label : étiquette pour préciser le type de donnée attendue 
+        - pour lier un label et un input : il faut donner les mêmes valeurs aux attibuts for (label) et id (input)
+        - l'attribut name sert à identifier la donnée côté back
+        - l'attribut placeholder permet de donner une indication sur la donnée à saisir
+
+        - l'attribut autofocus place automatiquement le focus sur le premier élément à remplir dans le formulaire
+        - l'attribut tabindex permet de choisir l'ordre de navigation par tabulation
+
+
+        -->
+
+        <!-- des balises pour du texte -->
+        
+        <label for="last-name">Votre nom : </label>
+        <input type="text" id="last-name" name="last-name" placeholder="Votre nom" autofocus tabindex="1">
+
+        <br><br>
+
+        <label for="first-name">Votre prénom : </label>
+        <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" tabindex="3">
+
+        <br><br>
+
+        <!-- des balises pour du texte sur plusieurs lignes -->
+
+        <label for="comment">Laissez-nous vos impressions :</label>
+        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="amazing!!" tabindex="2">votre site est juste incroyable !!</textarea>
+
+        <br><br>
+
+        <!-- les différents types d'input -->
+
+        <label for="email">Votre email : </label>
+        <input type="email" name="email" id="email" placeholder="machin@gmail.com">
+
+        <br><br>
+
+        <input type="color" name="" id="" value="#f778aa">
+
+        <br><br>
+
+        <input type="date" name="" id="">
+
+        <br><br>
+
+        <input type="file" name="" id="">
+
+        <br><br>
+
+        <input type="number" name="" id="" placeholder="votre age">
+
+        <br><br>
+
+        <input type="password" name="" id="" placeholder="votre mot de passe">
+
+        <br><br>
+
+        <input type="range" name="" id="">
+
+        <br><br>
+
+        <!-- les inputs de type checkbox (multi-choix) -->
+
+        <p>Choisissez vos langages :</p>
+
+        <input type="checkbox" name="html" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="css" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="js" id="js">
+        <label for="js">JavaScript</label>
+
+        <br><br>
+
+        <!-- les inputs de type radio (choix unique) -->
+
+        <p>Indiquez votre age :</p>
+
+        <input type="radio" name="age" id="18-35">
+        <label for="18-35"> 18 - 35</label>
+        <input type="radio" name="age" id="35-50">
+        <label for="35-50">35 - 50</label>
+        <input type="radio" name="age" id="50">
+        <label for="50">plus de 50</label>
+
+        <br><br>
+
+        <!-- les menus déroulants -->
+
+        <label for="dev">Quelle est votre spécialité ?</label>
+        <select name="dev" id="dev">
+            <option value="">---</option>
+            <option value="front">front</option>
+            <option value="back">back</option>
+            <option value="fullstack">fullstack</option>
+        </select>
+
+        <br><br>
+
+        <!-- les menus déroulants avec sous-menus -->
+
+        <label for="dev">Quelle est votre framework préféré ?</label>
+        <select name="dev" id="dev">
+            <optgroup label="Front">
+                <option value="react">React</option>
+                <option value="vue">Vue</option>
+                <option value="angular">Angular</option>
+            </optgroup>
+            <optgroup label="Back">
+                <option value="laravel">Laravel</option>
+                <option value="django">Django</option>
+                <option value="ruby-on-rails">Ruby on Rails</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
+        <!-- les menus déroulants avec choix de saisie supplémentaire -->
+
+        <label for="dev">Quelle est votre spécialité ?</label>
+        <input list="dev-spe" name="dev" id="dev">
+        <datalist id="dev-spe">
+            <option value="front">
+            <option value="back">
+            <option value="fullstack">
+        </datalist>
+
+        <br><br>
+
+        <!-- <input type="submit" value="Envoyer"> -->
+        <button type="submit">Envoyer</button>
+
+        <!-- <input type="reset" value="Effacer"> -->
+        <button type="reset">Effacer</button>
+    
+    </form>
+
+</body>
+</html>

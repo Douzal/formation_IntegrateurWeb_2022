@@ -1,0 +1,41 @@
+img {
+    width: 50%;
+}
+
+
+/* 
+pour différencier des images ou des liens, il est possible de cibler des éléments selon leur attribut, et/ou la valeur de leur attribut
+
+*/
+
+/* cibler un attribut */
+img[title] {
+    border: 4px solid gold;
+}
+
+/* cibler un attribut et sa valeur */
+a[target="_blank"] {
+    color: #ff0000;
+}
+
+/* l'attribut alt contient le mot route sans caracteres autour */
+img[alt~="route"] {
+    border-radius: 15px;
+}
+
+/* l'attribut src contient le mot route avec ou sans caracteres autour */
+img[src*="mountain"] {
+    border: 4px solid rgb(240, 105, 128);
+}
+
+/* l'attribut src se termine par le mot png
+(pour cibler des extensions)
+*/
+img[src$="png"] {
+    border: 4px solid green;
+}
+
+/* l'attribut href commence par https */
+a[href^="https"] {
+    text-decoration: none;
+}
