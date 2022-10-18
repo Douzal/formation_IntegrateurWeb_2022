@@ -1,0 +1,80 @@
+* {
+    background-color: #ffffff;
+}
+
+p {
+    background-color: #7fffd4;
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* 
+la propriété "position" permet de sortir un élément du flux habituel (position : static) pour le positionner sur l'axe z 
+(axe en profondeur où les élément sont empilés les uns sur les autres,
+l'élément au-dessus de la pile est celui le plus proche de l'écran)
+on peut déplacer un élément positionné avec les propriétés top, bottom, left, right
+
+position : relative
+-> l'élément se déplace par rapport à son ancienne position (à partir du coin haut-gauche)
+-> son ancien emplacement reste vide. les autres éléments sont restés à leur place
+
+*/
+
+a.relative{
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+}
+
+span {
+    position: relative;
+}
+
+
+/* position : absolute
+-> l'élément se déplace par rapport à son parent le plus proche qui a une position relative
+    si il n'a pas de parent en position relative,il se déplace par rapport au body
+-> son ancien emplacement est occupé par les autres éléments  */
+
+
+span a.absolute {
+    color: #006400;
+    border: 2px solid #006400;
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+}
+
+
+/* position : fixed
+-> l'élément se déplace par rapport au body
+-> son ancien emplacement est occupé par les autres éléments  
+-> l'élément reste fixé à sa nouvelle position lors du scroll sur la page
+*/
+
+a.fixed {
+    color: #ff8c00;
+    border: 2px solid #ff8c00;
+    position: fixed;
+    left: 100px;
+    bottom: 100px;
+}
+
+
+/* position : sticky
+-> l'élément se déplace par rapport au body
+-> au moment du scroll où l'élément va se retrouver à son nouvel emplacement, il va y resté collé  */
+
+
+a.sticky {
+    color: #1e90ff;
+    border: 2px solid #1e90ff;
+    position: sticky;
+    left: 300px;
+    top: 50px;
+}

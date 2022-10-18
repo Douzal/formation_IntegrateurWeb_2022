@@ -1,0 +1,8 @@
+
+1 - HTML de toutes les pages (4)
+2 - Style des pages (couleurs, polices...)
+3 - Style au passage de la souris sur les différents liens (couleur)
+4 - Identifier en couleur dans le menu de navigation la page sur laquelle on se trouve
+5 - Animation au passage de la souris sur les éléments de navigation (se soulignent progressivement)
+6 - menu dark mode en CSS
+(l'icône change au click et les couleur de la page également)

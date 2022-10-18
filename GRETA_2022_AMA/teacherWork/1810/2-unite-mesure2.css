@@ -1,0 +1,46 @@
+p, article, section {
+    border: 2px solid #808080;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/* 
+l'unité de mesure "em" est un coefficient multiplicateur de la taille de police de son parent
+cela peut devenir problèmatique si chaque parent a une police en em et ses enfants également
+
+les em sont généralement utilisées pour les margin et padding qui vont du coup se calculer par rapport aux width et height du parent
+(qui sont des propriétés non héritables, contrairement à font-size)
+*/
+
+p.basicFont {
+    font-size: 2em; 
+    /* 2 x la taille de caractère standart de son parent (16px) = 32px */
+}
+
+section {
+    font-size: 20px; 
+    /* devient la taille de référence pour tous les enfants de section */
+}
+
+article {
+    font-size: 2em;
+    /* 2 x la taille de caractère standart de son parent (20px) = 40px */
+}
+
+section p:last-of-type {
+    font-size: 2em; 
+    /* 2 x la taille de caractère standart de son parent (20px) = 40px */
+}
+
+
+/* 
+l'unité de mesure "rem" = "root em" est un coefficient multiplicateur de la taille de police de l'élément racine = l'élément html
+cela permet de s'adapter à l'environnement choisi par l'internaute
+*/
+
+h1 {
+    font-size: 2rem; 
+    /* 2 x 16px (si aucun changement dans le navigateur) = 32px */
+    /* si taille de police du navigateur = 20px -> 2x20px = 40px */
+}
