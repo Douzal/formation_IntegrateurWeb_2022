@@ -1,0 +1,40 @@
+
+/* 
+les éléments positionnés se retrouvent empilés sur l'axe z, selon l'ordre 
+dans lequel ils apparaissent dans code HTML 
+le dernier dans le code est au-dessus de la pile, il sera devant les autres à l'écran
+
+si on veut changer l'ordre d'empilement, on utilise la propriété z-index
+plus le z-index est élévé plus on est sur dessus de la pile, il sera devant les autres(par défaut il est à zéro)
+*/
+
+
+
+div {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #504f4f;
+    margin: 20px;
+    position: absolute;
+}
+
+div:nth-of-type(1) {
+    background-color: #00ffff;
+    top: 100px;
+    left: 100px;
+    z-index: 10000; 
+}
+
+div:nth-of-type(2) {
+    background-color: #ff00e6;
+    top: 150px;
+    left: 150px;
+    z-index: 2; 
+}
+
+div:nth-of-type(3) {
+    background-color: #2fff00;
+    top: 200px;
+    left: 200px;
+    z-index: 1; 
+}

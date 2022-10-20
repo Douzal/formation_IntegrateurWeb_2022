@@ -1,0 +1,32 @@
+body .flexNav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+body .flexNav img {
+  border-radius: 50%;
+  margin: 10px;
+}
+body .flexNav nav {
+  height: inherit;
+}
+body .flexNav nav ul.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 88px;
+  padding-right: 10px;
+}
+body .flexNav nav ul.flex-container li {
+  _list-style: none;
+  list-style-type: none;
+}
+body .flexNav nav ul.flex-container li a {
+  text-decoration: none;
+}
+body .flexNav nav ul.flex-container p {
+  border: 2px solid black;
+  _margin: 2rem;
+  padding: 1rem;
+}/*# sourceMappingURL=style.css.map */

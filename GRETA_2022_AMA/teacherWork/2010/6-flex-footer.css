@@ -1,0 +1,53 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+address {
+    font-style: unset;
+    display: inline;
+}
+
+footer {
+    margin-top: 12rem;
+}
+
+section.main-infos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logistic-data div, .legal-mentions li {
+    margin-top: 0.8em;
+}
+
+iframe {
+    width: 30rem;
+    height: 20rem;
+}
+
+
+.network i {
+    font-size: 2rem;
+    margin-top: 0.5em;
+}
+
+section.copyright {
+    text-align: center;
+}
+
+section.copyright::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 0.1em;
+    margin: 3rem auto 0;
+    background-color: #373737;
+}

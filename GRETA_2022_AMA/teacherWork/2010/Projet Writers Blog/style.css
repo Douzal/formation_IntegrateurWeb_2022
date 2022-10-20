@@ -1,0 +1,44 @@
+
+header {
+    font-size: 1.3rem;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+/* classe utilisée pour identifier la page sur laquelle on se trouve  */
+nav .activeTab {
+    color: #ff69b4;
+}
+
+/* animation au hover d'une ligne sous le lien */
+nav a::after {
+    content: "";
+    background-color: #ff69b4;
+    width: 0;  /* largeur à 0 par défaut */
+    height: 0.2rem;
+    position: absolute; /* --> placer son parent (élément a) en position relative */
+    top: 2rem;
+    left: 0;
+    /* vitesse d'exécution de l'animation (width 0 --> 100%) */
+    transition: width 0.3s ease-in;
+}
+nav a:hover::after {
+    width: 100%;  /* largeur au maximum au moment du hover */
+}
+
+
+
+

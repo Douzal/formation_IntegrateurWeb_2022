@@ -1,0 +1,26 @@
+$borderSimple : 1px solid black;
+
+body {
+    section {
+        border: $borderSimple;
+        display: flex;
+        height: 70vw;
+        _justify-content: space-evenly;
+        align-items: center;
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            margin: 10px;
+
+            &:first-child {
+                align-self: flex-start;
+            }
+
+            &:last-child {
+                align-self: flex-end;
+            }
+        }
+    }
+}

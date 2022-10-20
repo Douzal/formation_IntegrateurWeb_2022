@@ -1,0 +1,70 @@
+$colorPink : rgba(255, 143, 148, 255);
+$borderSimple : 1px solid black;
+$borderBlue : 2px solid blue;
+
+body {
+    nav {
+        ul {
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            margin: 1rem;
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+
+            &:hover {
+                color: $colorPink;
+
+                // text-decoration: underline;
+                &::after {
+                    width: 100%; // mise à 100% de la barre (correspondant au ::after) pour la rendre visible
+                }
+            }
+
+            &::after {
+                content: ' '; // toujours sinon rien n'apparaitra, donc même vide le renseigner
+                background-color: $colorPink;
+                position: absolute;
+                height: 0.25rem;
+                width: 0; // 0 pour l'augmenter au niveau du hover
+                top: 2rem;
+                left: 0;
+                transition: width 0.3s ease-in; // animation d'apparition de la barre
+            }
+
+            &.activeTab {
+                color: $colorPink;
+            }
+        }
+
+    }
+
+    // pour la page footerExercie
+    footer {
+        border: $borderBlue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            margin: 10px;
+        }
+
+        section.flex {
+            _border: $borderBlue;
+            display: flex;
+            _height: 200px;
+            _width: 50%;
+            _padding: 10vw;
+            _line-height: 2rem;
+            _margin: 100px;
+
+            .logos {}
+        }
+    }
+}

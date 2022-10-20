@@ -1,0 +1,23 @@
+
+/* 
+on peut utiiser flexbox pour centrer un élément unique à l'intérieur d'un container
+
+ici, le container est le body
+justify-content permet de centrer la div sur l'axe horizontal
+align-items permet de centrer la div sur l'axe vertical
+🚨 il faut préciser une hauteur au body (par défaut sa hauteur est uniquement la hauteur de son contenu)
+*/
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #504f4f;
+    background-color: #00ffff;
+}

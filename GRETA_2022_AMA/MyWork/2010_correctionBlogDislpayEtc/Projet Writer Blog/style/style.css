@@ -1,0 +1,48 @@
+body nav ul {
+  text-align: center;
+}
+body nav li {
+  display: inline;
+  margin: 1rem;
+}
+body nav a {
+  position: relative;
+  text-decoration: none;
+}
+body nav a:hover {
+  color: rgb(255, 143, 148);
+}
+body nav a:hover::after {
+  width: 100%;
+}
+body nav a::after {
+  content: " ";
+  background-color: rgb(255, 143, 148);
+  position: absolute;
+  height: 0.25rem;
+  width: 0;
+  top: 2rem;
+  left: 0;
+  transition: width 0.3s ease-in;
+}
+body nav a.activeTab {
+  color: rgb(255, 143, 148);
+}
+body footer {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body footer img {
+  margin: 10px;
+}
+body footer section.flex {
+  _border: 2px solid blue;
+  display: flex;
+  _height: 200px;
+  _width: 50%;
+  _padding: 10vw;
+  _line-height: 2rem;
+  _margin: 100px;
+}/*# sourceMappingURL=style.css.map */

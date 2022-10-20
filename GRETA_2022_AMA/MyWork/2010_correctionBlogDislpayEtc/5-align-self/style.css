@@ -1,0 +1,19 @@
+body section {
+  border: 1px solid black;
+  display: flex;
+  height: 70vw;
+  _justify-content: space-evenly;
+  align-items: center;
+}
+body section div {
+  width: 100px;
+  height: 100px;
+  background-color: burlywood;
+  margin: 10px;
+}
+body section div:first-child {
+  align-self: flex-start;
+}
+body section div:last-child {
+  align-self: flex-end;
+}/*# sourceMappingURL=style.css.map */
