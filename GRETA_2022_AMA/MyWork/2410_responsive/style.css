@@ -1,0 +1,95 @@
+body.mediaQueries h1 {
+  border: 1px solid black;
+  text-align: center;
+}
+body.mediaQueries a:hover {
+  color: aqua;
+}
+@media screen and (min-width: 992px) {
+  body.mediaQueries {
+    font-size: 1.2rem;
+  }
+  body.mediaQueries h1 {
+    max-width: 50vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body.mediaQueries a:hover {
+    color: tomato;
+  }
+  body.mediaQueries p {
+    max-width: 50vw;
+  }
+  body.mediaQueries article {
+    display: flex;
+  }
+}
+body.responsiveSize h1 {
+  font-size: clamp(1.5rem, 3.6vw, 2rem);
+}
+body.responsiveSize p {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  text-align: justify;
+  padding: 1em;
+  margin: 2rem;
+  display: inline;
+}
+body.responsiveExercice {
+  box-sizing: border-box;
+}
+body.responsiveExercice div:not(.groupDiv) {
+  background-color: #428fed;
+  height: 200px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.responsiveExercice div:not(.groupDiv) h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: clamp(3em, 4vw, 5em);
+}
+body.responsiveExercice picture {
+  max-width: 100%;
+  display: none;
+}
+body.responsiveExercice section article {
+  border: 1px solid #8ca125;
+  padding: 15px;
+  margin: 15px;
+  _position: relative;
+}
+body.responsiveExercice section article img {
+  position: relative;
+  max-width: 5rem;
+  max-height: 5rem;
+  _transform: translate(400%, 0%);
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  body.responsiveExercice div:not(.groupDiv) {
+    background-color: #ad4b4b;
+    height: 25vw;
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  body.responsiveExercice div:not(.groupDiv) h1 {
+    font-size: clamp(3em, 4vw, 5em);
+  }
+}
+@media screen and (min-width: 800px) {
+  body.responsiveExercice div:not(.groupDiv) {
+    background-color: #d9a520;
+    height: 25vw;
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  body.responsiveExercice div:not(.groupDiv) h1 {
+    font-size: clamp(3em, 4vw, 5em);
+  }
+  body.responsiveExercice picture {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

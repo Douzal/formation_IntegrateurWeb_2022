@@ -1,0 +1,56 @@
+/* 
+ 
+le responsive est l'adaptation d'une page web à des supports différents (largeurs d'écran)
+
+il existe 2 outils : 
+
+- media queries
+
+    @media screen and (min-width: 576px) {
+        // règles de style pour les écrans de 576px de large et plus //
+    }
+
+- propriétés CSS qui permettent aux tailles éléments de s'adapter aux tailles d'écrans
+
+    flex-grow, flex-wrap...
+
+
+--> le but est d'utiliser au maximum ces propriétés CSS pour écrire le moins possible de media queries    
+
+Aujourd'hui, on écrit le CSS en Mobile First :
+
+on écrit le code pour des écrans mobiles
+puis on ajoute des media queries pour modifier ou ajouter des précisions pour des écrans plus grands
+
+
+la majorité des éléments HTML sont naturellement responsive (ils prennent toute la largeur disponible et se placent les uns en dessous des autres (comme dans la mise en page pour des mobiles)
+
+les mises en page plus complexes ne viennent qu'avec des largeurs d'écrans plus grandes qui permettent cela
+
+
+tailles d'écrans :
+    - < 576px => mobiles
+    - 576px - 992px => tablettes
+    - 992px - 1200px => pc portables
+    - > 1200px => pc fixes
+*/
+
+/* rappel : on fournit l'image avec une largeur adaptée pour ne pas faire travailler inutilement  le navigateur (--> mauvaises performances) */
+
+img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 450px){
+    img {
+        display: block;
+        /* cette déclaration modifie la déclaration initiale (display: none) 
+            et s'ajoute aux déclarations qui sont toujours valides
+            (max-width: 100%;
+            height: auto;) 
+        */
+    }
+}
+

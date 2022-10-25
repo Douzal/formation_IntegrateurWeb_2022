@@ -1,0 +1,38 @@
+
+hr {
+    margin: 3rem;
+}
+
+h1 {
+    color: firebrick;
+    font-weight: 900;
+}
+
+.myfont {
+    font-weight: 900;
+}
+
+#text-end {
+    text-align: right;
+}
+
+.cloneBoostrapText {
+    /* .text-uppercase */
+    text-transform: uppercase;
+    /* .text-center */
+    text-align: center;
+    /* .lead */
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.img-personal-bg {
+    background-color: #ee5454;
+}
+
+.img-personal-border {
+    padding: 0.4rem;
+    background-color: #d797c5;
+    border: 2px solid #af1784;
+    border-radius: 0.375rem;
+}

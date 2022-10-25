@@ -1,0 +1,11 @@
+@import url(../style/style.css);
+body h1 {
+  color: plum;
+}
+body a {
+  color: plum;
+  text-decoration: none;
+}
+body a:visited {
+  _color: plum;
+}/*# sourceMappingURL=addedStyle.css.map */

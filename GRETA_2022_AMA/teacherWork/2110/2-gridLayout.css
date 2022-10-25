@@ -1,0 +1,36 @@
+
+/* 
+display: grid => transforme un container en grille grid layout
+
+grid-template-columns => créer des colonnes dans la grille
+    grid-template-columns: 200px 200px 200px;  => 3 colonnes de 200px
+    grid-template-columns: repeat(3, 200px);  => 3 colonnes de 200px
+
+grid-template-rows => créer des rangées dans la grille
+    grid-template-rows: 200px 400px 100px;  
+    => 1 rangée de 200px, une de 400px et une de 100px
+    grid-template-rows: repeat(4, 10rem);  => 4 rangées de 10rem
+
+(il faut avoir assez d'espace en hauteur pour ouvoir répartir cet espace dans différentes rangées)
+
+fr => unité de mesure permettant de répartir l'espace disponible en fractions 
+    grid-template-columns: 1fr 2fr 
+    => une colonne occupe 1/3 de l'espace  
+    => une colonne occupe 2/3 de l'espace
+
+column-gap: 40px => une marge de 40px entre les colonnes
+row-gap: 20px => une marge de 20px entre les rangées
+gap: 2rem => une marge de 2rem entre les colonnes et les rangées
+
+*/
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50% repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+    grid-template-areas: ;
+}
+

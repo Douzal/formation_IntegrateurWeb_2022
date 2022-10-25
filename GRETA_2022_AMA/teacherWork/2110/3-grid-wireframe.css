@@ -1,0 +1,62 @@
+body * {
+    padding: 2rem;
+}
+
+/* container grid */
+body {
+    height: 100vh;
+    text-align: center;
+    font-size: 1.6rem;
+
+    /* créer la grille */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+
+    /* remplir la grille en dessinant des zones */
+    grid-template-areas: 
+    "header header header header"
+    "image1 article1 article1 archives"
+    "article2 article2 image2 archives"
+    "pub pub pub archives"
+    "footer footer footer footer";
+}
+
+/* attribuer les zones de la grille aux éléments HTML*/
+header {
+    grid-area: header;
+    background-color: #e7c79e;
+}
+
+.img1 {
+    grid-area: image1;
+}
+
+.img2 {
+    grid-area: image2;
+}
+
+.article1 {
+    grid-area: article1;
+    background-color: #4767c5;
+}
+
+.article2 {
+    grid-area: article2;
+    background-color: #6391bd;
+}
+
+.archives {
+    grid-area: archives;
+    background-color: #c95050;
+}
+
+.pub {
+    grid-area: pub;
+    background-color: #d76fb3;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #e7c79e;
+}

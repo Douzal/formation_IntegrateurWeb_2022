@@ -1,0 +1,17 @@
+// import
+@import url(../style/style.css);
+
+body {
+    h1 {
+        color: plum;
+    }
+
+    a {
+        color: plum;
+        text-decoration: none;
+
+        &:visited {
+            _color: plum;
+        }
+    }
+}

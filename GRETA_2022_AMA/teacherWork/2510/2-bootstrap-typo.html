@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La typographie de Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="personal-style.css">
+</head>
+<body>
+
+    <!-- 
+
+        1/ pour appliquer notre style en plus, il faut faire le lien avec notre fichier APRES le lien avec les fichiers Bootstrap
+
+        2/ si on veut appliquer un style sur une propriété déjà utilisée par une classe Bootstrap, il faudra égaler ou dépasser le niveau de spécificité de la classe Bootstrap (avec une classe par exemple)
+
+     -->
+
+    <!-- https://getbootstrap.com/docs/5.2/content/typography/#display-headings -->
+    
+    <h1 class="display-1 myfont"> .display-1 dans un h1</h1>
+
+    <h2 class="display-1"> .display-1 dans un h2</h2>
+
+    <h3 class="display-1"> .display-1 dans un h3</h3>
+
+    <hr>
+
+    <!-- https://getbootstrap.com/docs/5.2/content/typography/#lead -->
+
+    <p class="lead"> .lead paragraphe </p>
+    <p> paragraphe normal </p>
+
+    <hr>
+
+    <!-- https://getbootstrap.com/docs/5.2/content/typography/#blockquotes -->
+
+    <figure>
+        <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- https://getbootstrap.com/docs/5.2/utilities/text/#text-alignment -->
+
+    <!-- lorsqu'une classe bootstrap utilise !important, on ne pourra être plus spécifique pour changer ce style (même avec un id)-->
+
+    <p class="text-start" id="text-end">Start aligned text on all viewport sizes.</p>
+    <p class="text-center">Center aligned text on all viewport sizes.</p>
+    <p class="text-end">End aligned text on all viewport sizes.</p>
+
+    <hr>
+
+    <!-- https://getbootstrap.com/docs/5.2/utilities/text/#text-transform -->
+
+    <p class="text-lowercase">Lowercased text.</p>
+    <p class="text-uppercase text-center lead">Uppercased text.</p>
+    <p class="cloneBoostrapText">même rendu mais sans Bootstrap</p>
+    <p class="text-capitalize">CapiTaliZed text.</p>
+
+    <hr>
+
+    <!-- https://getbootstrap.com/docs/5.2/utilities/text/#font-size -->
+
+    <p class="fs-1">.fs-1 text</p>  <!-- font-size: calc(1.375rem + 1.5vw) -->
+    <p class="fs-2">.fs-2 text</p>
+    <p class="fs-3">.fs-3 text</p>
+    <p class="fs-4">.fs-4 text</p>
+    <p class="fs-5">.fs-5 text</p>
+    <p class="fs-6">.fs-6 text</p>
+
+    <hr>
+
+    <!-- https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics -->
+
+    <p class="fw-bold">Bold text.</p>
+    <p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+    <p class="fw-semibold">Semibold weight text.</p>
+    <p class="fw-normal">Normal weight text.</p>
+    <p class="fw-light">Light weight text.</p>
+    <p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    
+</body>
+</html>

@@ -1,0 +1,134 @@
+$simpleBorders  : 1px solid black;
+$colorOrange    : #d9a520;
+$colorBlue      : #428fed;
+$colorRed       : #ad4b4b;
+$colorGreen     : #8ca125;
+$colorWhite     : white;
+
+body {
+    &.mediaQueries {
+
+        // basique : mobile first
+        h1 {
+            border: $simpleBorders;
+            text-align: center;
+        }
+        a:hover {
+            color: aqua;
+        }
+    
+        // 992px et plus
+        @media screen and (min-width:992px){
+            font-size: 1.2rem;
+            h1 {
+                max-width: 50vw;
+                margin: 0 auto;
+                text-align: center;
+            }
+            a:hover {
+                color: tomato;
+            }
+            p {
+                max-width: 50vw;;
+            }
+            article {
+                display: flex;
+            }
+        }
+    
+    }
+
+    &.responsiveSize {
+        h1 {
+            font-size: clamp(1.5rem, 3.6vw, 2rem);;
+        }
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            text-align: justify;
+            padding: 1em;
+            margin: 2rem;
+            display: inline;
+        }
+        
+        @media screen and (min-width: 900px){
+            article {
+
+            }
+        }
+    }
+
+    &.responsiveExercice {
+        box-sizing: border-box;
+        // CSS Mobile
+        div:not(.groupDiv) {
+            background-color: $colorBlue;
+            height: 200px;// 40vw;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                text-transform: uppercase;
+                color: $colorWhite;
+                font-size: clamp(3em, 4vw, 5em);
+            }
+        }
+        picture {
+            max-width: 100%;
+            display: none;
+        }
+
+        section {
+            article  {
+                border: 1px solid $colorGreen;
+                padding: 15px;
+                margin: 15px;
+                _position: relative;
+                img {
+                    position:relative;
+                    max-width: 5rem;
+                    max-height: 5rem;
+                    _transform: translate(400%, 0%);
+                    // need centrer
+                }
+                p {
+
+                }
+            }
+
+
+        }
+
+        // CSS Tablet
+        @media screen and (min-width: 600px) and (max-width: 800px){
+            div:not(.groupDiv) {
+                background-color: $colorRed;
+                height: 25vw;// 40vw;
+                margin: 20px;
+                h1 {
+                    font-size: clamp(3em, 4vw, 5em);
+                }
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        // CSS desktop
+        @media screen and (min-width: 800px) {
+            div:not(.groupDiv) {
+                background-color: $colorOrange;
+                height: 25vw;// 40vw;
+                margin: 20px;
+                h1 {
+                    font-size: clamp(3em, 4vw, 5em);
+                }
+                text-align: center;
+                justify-content: center;
+            }
+            picture {
+                display:block;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,54 @@
+/* 
+mobile first :
+
+le titre a une bordure et le texte du titre est centré
+le lien a une couleur au passage du curseur
+
+
+à partir de 992px :
+
+le titre fait la moitié de l'écran et il est centré horizontalement
+
+les tailles de polices du titre, des paragraphes et du lien sont plus grandes
+et la couleur du lien au passage du curseur change
+
+les 2 paragraphes sont côte à côte
+
+*/
+
+
+h1 {
+    text-align: center;
+    border: 2px solid #fc4f4f;   
+    padding: 1rem; 
+}
+
+p {
+    text-align: justify;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    color:#fc4f4f;
+}
+
+
+@media screen and (min-width: 992px) {
+    h1 {
+        width: 50%;
+        margin: 0 auto;
+    }
+    body {
+        font-size: 2.5rem;
+    }
+    a:hover {
+        color:#4f55fc;
+    }
+    article {
+        display: flex;
+    }
+}

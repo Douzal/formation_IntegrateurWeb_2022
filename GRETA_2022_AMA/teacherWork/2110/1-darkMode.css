@@ -1,0 +1,31 @@
+
+body, html {
+    margin: 0;
+}
+
+.darkModeButton {
+    appearance: none;
+    cursor: pointer;
+}
+
+.darkModeButton::after {
+    content: url('moon.png');
+    /* si besoin de redimensionner l'icône */
+    /* 
+    content: '';
+    background-image: url('moon.png'); 
+    */
+    position: absolute;
+    right: 0.6rem;
+    top: 1rem;
+}
+
+
+.darkModeButton:checked + .mainContent {
+    background-color: #373737;
+    color: #f5f5f5;
+}
+
+.mainContent {
+    padding-top: 2rem;
+}

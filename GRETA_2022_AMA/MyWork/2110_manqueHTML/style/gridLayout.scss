@@ -1,0 +1,71 @@
+$simpleBorders : 1px solid black;
+$baseColor: grey;
+
+body {
+    background-color: $baseColor;
+    .grid {
+        height: 100vw;
+        display: grid;
+        _border-top: $simpleBorders;
+
+        // CREATION DE LA GRILLE 3x2
+        // grid-template-columns: 200px 200px 200px;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-columns: repeat(3, 3fr);
+        // grid-template-rows: 400px 200px;
+        grid-template-rows: 2fr 1fr;
+        // espace entre les éléments
+        gap : 1rem;
+        // row-gap: 2rem;
+        img {
+            border: $simpleBorders;
+            box-shadow:0.7rem .7rem 5px -5px black;
+        }
+    }
+    .gridArea {
+        height:50vw;
+        padding: 1rem;
+        text-align: center;
+        box-sizing: content-box;
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+                "header header header header"
+                "image1 article1 article1 archives"
+                "article2 article2 image2 archives"
+                "pub pub pub archives"
+                "footer footer footer footer";
+        header {
+            grid-area: header;
+            background: rgb(233, 233, 30);
+        }
+        .img1 {
+            grid-area: image1;
+        }
+        article.article1 {
+            grid-area: article1;
+            background: rgb(30, 131, 63);
+        }
+        article.article2 {
+            grid-area: article2;
+            background: rgb(45, 53, 129);
+        }
+        section.archives {
+            grid-area: archives;
+            background: rgb(190, 189, 197);
+        }
+        aside.pub {
+            grid-area: pub;
+            background: rgb(37, 32, 105);
+        }
+        .img2 {
+            grid-area: image2;
+        }
+
+        footer {
+            grid-area: footer;
+            background: rgb(192, 192, 111);
+        }
+    }
+}
