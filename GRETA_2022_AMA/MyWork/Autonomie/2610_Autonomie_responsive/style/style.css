@@ -8,6 +8,7 @@ body #nav {
   align-items: center;
   height: 100px;
   display: flex;
+  position: fixed;
   border-bottom: 1px black solid;
   _margin-right: 10px;
   width: 99%;
@@ -68,13 +69,31 @@ body main #Home #homeContent {
   flex-direction: column;
   _align-items: center;
 }
-body main #Home #homeContent #homeContent_fav i {
-  width: 100%;
-  height: 100%;
-  _font-size: 3em;
+body main #Home #homeContent #homeContent_fav div {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  gap: 0 4rem;
+}
+body main #Home #homeContent #homeContent_fav div i {
+  display: inline;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 2rem;
+}
+body main #Blog #blogContent {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+body main #Blog #blogContent img {
+  width: 100%;
+}
+body main #Blog #blogContent div:nth-child(2n) {
+  justify-content: left;
+}
+body main #Blog #blogContent div:nth-child(2n+1) {
+  justify-content: right;
 }
 body main #Blog #blogContent p.blogTitle {
   font-size: 1.5em;
@@ -101,12 +120,25 @@ body main #Add .form textarea[type=submit] {
   border: none;
   _border-radius: 10%;
 }
-body main #About div div {
-  _justify-content: center;
-  _align-items: center;
-  display: inline-flex;
+body main #About div.flexContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
-body main #About div div:nth-child(2) {
+body main #About div.flexContainer div {
+  max-width: 50%;
+  _align-items: center;
+}
+body main #About div.flexContainer div:nth-child(1) img {
+  margin-bottom: 1rem;
+}
+body main #About div.flexContainer div:nth-child(2) aside {
+  margin-bottom: 1rem;
+}
+body main #About div.flexContainer div img {
+  width: 100%;
+}
+body main #About div.flexContainer div:nth-child(2) {
   _margin-left: 10px;
 }
 body footer #footerPart1 {
@@ -159,6 +191,10 @@ body footer #footerPart1 #legal #legalIcons {
   _display: flex;
   _flex-direction: row;
 }
+body footer #footerPart1 #map {
+  width: 100%;
+  height: 100%;
+}
 body footer #footerPart1 a {
   text-decoration: inherit;
   color: black;
@@ -198,13 +234,14 @@ body #ourBlog,
 body #addYourArticle,
 body #aboutUs {
   font-family: Satisfy, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3em;
+  font-size: 3rem;
   width: 100%;
 }
 body #joinUs p,
 body #ourBlog p,
 body #addYourArticle p,
 body #aboutUs p {
+  font-size: clamp(1.5rem, 3vw, 2.85rem);
   color: rgb(255, 143, 148);
   text-align: center;
   width: 100%;
@@ -216,4 +253,9 @@ body #ourBlog p::first-letter,
 body #addYourArticle p::first-letter,
 body #aboutUs p::first-letter {
   text-transform: capitalize;
+}
+body p:not(.pageTitle),
+body div:not(.pageTitle),
+body form {
+  font-size: clamp(0.8rem, 3vw, 1rem);
 }/*# sourceMappingURL=style.css.map */
