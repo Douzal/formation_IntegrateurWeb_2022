@@ -6,6 +6,68 @@ body {
     _padding-top: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+    #nav {
+        top: 0px;
+        _justify-content: center;
+        align-items: center;
+        height: $navHeigh;
+        display: flex;
+        border-bottom: 1px black solid;
+        _margin-right: 10px;
+        width: 99%;
+        _float: left;
+        _margin: 0 0 1em 0;
+        _padding: 0;
+        _padding-right: 10px;
+        background-color: white;
+        opacity: 0.8;
+
+        #aHome {
+            color: $colorPink;
+        }
+
+        a {
+            _opacity: 100%;
+            margin: 0 auto;
+            text-decoration: inherit;
+            padding: 0;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+
+            &:visited {
+                text-decoration: inherit;
+                color: inherit;
+            }
+
+            &::after {
+                content: '';
+                background-color: $colorPink;
+                position: absolute;
+                top: 5rem;
+                height: 0.2rem;
+                width: 0;
+            }
+
+            &:hover {
+                _text-decoration: underline;
+                color: $colorPink !important;
+
+                &::after {
+                    display: block;
+                    width: 2rem;
+                    transition: width 0.3s ease-in;
+                    // }
+                }
+
+                #home:target {
+                    color: $colorPink;
+                }
+            }
+        }
+    }
+
     main {
         margin: $navHeigh 0;
         margin-bottom: 0px;
@@ -50,8 +112,6 @@ body {
         }
 
         #Add {
-            _font-family: "Comic Sans MS";
-
             .form {
                 box-sizing: border-box;
                 margin: 2px;
@@ -90,183 +150,123 @@ body {
 
     }
 
-    #nav {
-        top: 0px;
-        _justify-content: center;
-        align-items: center;
-        height: $navHeigh;
-        display: flex;
-        border-bottom: 1px black solid;
-        _margin-right: 10px;
-        width: 99%;
-        _float: left;
-        _margin: 0 0 1em 0;
-        _padding: 0;
-        _padding-right: 10px;
-        background-color: white;
-        opacity: 0.8;
+    footer {
+        #footerPart1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            _padding-top: $navHeigh*1.5;
+            _justify-content: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            display: inline-flex;
+            _align-content: center;
 
-        #aHome {
-            color: $colorPink;
-        }
-
-        a {
-            _opacity: 100%;
-            margin: 0 auto;
-            text-decoration: inherit;
-            padding: 0;
-
-            &::first-letter {
-                text-transform: capitalize;
-            }
-
-            &:visited {
-                text-decoration: inherit;
-                color: inherit;
-            }
-
-            &::after {
-                content: '';
-                background-color: $colorPink;
-                position: absolute;
-                top: 4rem;
-                height: 0.2rem;
-                width: 0;
-            }
-
-            &:hover {
-                _text-decoration: underline;
-                color: $colorPink;
-
-                &::after {
-                    display: block;
-                    width: 2rem;
-                    transition: width 0.3s ease-in;
-                    // }
-                }
-
-                #home:target {
-                    color: $colorPink;
-                }
-            }
-        }
-
-        footer {
-            #footerPart1 {
+            #contact,
+            #legal {
                 width: 100%;
                 height: 100%;
                 display: flex;
-                _padding-top: $navHeigh*1.5;
-                _justify-content: center;
-                display: flex;
-                justify-content: space-between;
+                flex-direction: row;
                 align-items: center;
-                display: inline-flex;
-                _align-content: center;
+                justify-content: space-between;
+                _margin: 2em;
 
-                #contact,
-                #legal {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                    _margin: 2em;
+                li {
+                    margin: 3em 0;
 
-                    li {
-                        margin: 3em 0;
-
-                        & i {
-                            _height: 50px;
-                            _width: 50px;
-                        }
-                    }
-
-                    #legalMentions li {
-                        margin: 2em 0;
-
-                        &:first-letter {
-                            text-transform: capitalize;
-                        }
-                    }
-
-                    #legalIcons li {
-                        margin: 3em 0;
+                    & i {
                         _height: 50px;
                         _width: 50px;
                     }
-
-                    #legalIcons {
-                        _display: flex;
-                        _flex-direction: row;
-                    }
                 }
 
-                a {
-                    text-decoration: inherit;
-                    color: black;
+                #legalMentions li {
+                    margin: 2em 0;
 
-                    &::first-letter {
+                    &:first-letter {
                         text-transform: capitalize;
                     }
-
-                    &:visited {
-                        _text-decoration: inherit;
-                        _color: black;
-                    }
                 }
 
-                li {
-                    list-style-type: none;
-                    _margin: 0 2em;
-                    _padding: 0 2em;
+                #legalIcons li {
+                    margin: 3em 0;
+                    _height: 50px;
+                    _width: 50px;
                 }
-            }
 
-            #upArrow {
-                _justify-content: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: auto;
-
-                i {
-                    text-decoration: none;
-
-                    &:visited {
-                        text-decoration: none;
-                        color: black;
-                    }
+                #legalIcons {
+                    _display: flex;
+                    _flex-direction: row;
                 }
             }
 
-            #footerPart2 {
-                text-transform: capitalize;
-                text-align: center;
-            }
-        }
-
-        // GENERAL
-        #joinUs,
-        #ourBlog,
-        #addYourArticle,
-        #aboutUs {
-            font-family: Satisfy, Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 3em;
-            width: 100%;
-
-            p {
-                color: $colorPink;
-                text-align: center;
-                width: 100%;
-                margin-top: 0em;
-                margin-bottom: 2em;
+            a {
+                text-decoration: inherit;
+                color: black;
 
                 &::first-letter {
                     text-transform: capitalize;
                 }
 
+                &:visited {
+                    _text-decoration: inherit;
+                    _color: black;
+                }
+            }
+
+            li {
+                list-style-type: none;
+                _margin: 0 2em;
+                _padding: 0 2em;
             }
         }
+
+        #upArrow {
+            _justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+
+            i {
+                text-decoration: none;
+
+                &:visited {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+
+        #footerPart2 {
+            text-transform: capitalize;
+            text-align: center;
+        }
     }
+
+    // GENERAL
+    #joinUs,
+    #ourBlog,
+    #addYourArticle,
+    #aboutUs {
+        font-family: Satisfy, Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 3em;
+        width: 100%;
+
+        p {
+            color: $colorPink;
+            text-align: center;
+            width: 100%;
+            margin-top: 0em;
+            margin-bottom: 2em;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+
+        }
+    }
+
+}

@@ -23,7 +23,7 @@ $(function () {
             $("#a" + nomPage).css("color", 'black');
 
             // console.log(`nomPage : ${nomPage}\nallNames[clickedPage] : ${allNames[clickedPage]}`);
-            console.warn(nomPage === allNames[clickedPage]);
+            // console.warn(nomPage === allNames[clickedPage]);
             if (nomPage === allNames[clickedPage]) {
                 $("#" + nomPage).css("display", "block");
                 $("#a" + nomPage).css("color", colorPink);
