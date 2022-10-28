@@ -1,0 +1,21 @@
+
+:root {
+    --main-color: #353535;
+    --main-bg: #f5f5f5;
+    --icon-color: #ffc0cb;
+}
+
+:root:has(.darkMode-btn:checked) {
+    --main-color: #f5f5f5;
+    --main-bg: #353535;
+    --icon-color: #c0d0ff;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--main-color);
+}
+
+.network-icon {
+    color: var(--icon-color);
+}

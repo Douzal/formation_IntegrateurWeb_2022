@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Boilerplate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        article, aside {
+            border: 2px solid #2d2d2d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        pour créer une grille à l'intérieur d'un grille, il suffit d'utiliser la classe "row" là où on souhaite créer cette grille
+
+     -->
+
+    <div class="container-fluid">
+        <section class="row">
+
+            <article class="col-sm-8">
+                <h2 class="text-center">ARTICLE</h2>
+
+                <!-- grille imbriquée : 12 colonnes disponibles -->
+                <div class="row">
+
+                    <!-- 6 colonnes à partir de sm et 4 colonnes à partir de md -->
+                    <figure class="col-sm-6 col-md-4">
+                        <img src="./grid-exercice1.png" alt="" class="img-fluid">
+                    </figure>
+
+                    <!-- 6 colonnes à partir de sm et 4 colonnes à partir de md -->
+                    <p class="col-sm-6 col-md-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aut quidem corrupti itaque quibusdam est, tempora voluptas facere tempore veritatis repudiandae aliquam, odio inventore hic commodi qui! Voluptatibus, iusto repudiandae!</p>
+
+                    <!-- 
+                        - sur md : il ne reste plus de colonne disponibles (2 * 6 colonnes = 12) : il va à la ligne 
+                        - sur sm : il reste 4 colonnes disponibles (2 * 4 colonnes = 8) : il prend ces 4 colonnes 
+                    -->
+                    <p class="col">Quis totam recusandae sint at optio aut dolorem culpa alias eius dicta! Voluptas voluptatum quo tempore nihil sed, rerum quidem id excepturi atque perferendis magnam distinctio, labore, nisi ullam laboriosam.</p>
+                </div>
+            </article>
+
+            <aside class="col-sm-4">
+                <h2 class="text-center">ASIDE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat ipsa error impedit iste inventore. Cum mollitia inventore repudiandae? Recusandae inventore quo, neque reprehenderit ipsa ipsam in vel minima sequi nam!</p>
+            </aside>
+        </section>
+    </div>
+  
+</body>
+</html>
