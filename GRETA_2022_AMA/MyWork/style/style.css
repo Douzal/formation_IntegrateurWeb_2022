@@ -17,6 +17,9 @@ body h2 {
 body h2::first-letter {
   text-transform: capitalize;
 }
+body .header__description {
+  color: white;
+}
 body .indent {
   text-indent: 30px;
 }
@@ -25,4 +28,15 @@ body a:before {
 }
 body blockquote:after {
   content: " :";
+}
+body .section__subtitle, body .section__title, body .section__par {
+  color: white;
+  font-style: 1.3rem;
+  font-weight: bolder;
+}
+body .section__title {
+  color: green;
+}
+body .section__subtitle {
+  color: rgba(20, 43, 34, 0.6588235294);
 }/*# sourceMappingURL=style.css.map */

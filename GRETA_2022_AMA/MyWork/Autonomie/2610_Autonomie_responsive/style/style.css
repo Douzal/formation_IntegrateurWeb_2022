@@ -2,15 +2,10 @@ body {
   _padding-top: 60px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 body #nav {
   top: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: clamp(4rem, 8vw, 6rem);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   border-bottom: 1px black solid;
@@ -18,11 +13,9 @@ body #nav {
   background-color: white;
   opacity: 0.8;
 }
-
 body #nav #aHome {
-  color: #ff8f94;
+  color: rgb(255, 143, 148);
 }
-
 body #nav a {
   color: black;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -31,89 +24,65 @@ body #nav a {
   text-decoration: inherit;
   padding: 0;
 }
-
 body #nav a::first-letter {
   text-transform: capitalize;
 }
-
 body #nav a:visited {
   text-decoration: inherit;
   color: inherit;
 }
-
 body #nav a::after {
-  content: '';
-  background-color: #ff8f94;
+  content: "";
+  background-color: rgb(255, 143, 148);
   position: absolute;
   top: 4.5rem;
   height: 0.2rem;
   width: 0;
 }
-
 @media screen and (max-width: 960px) {
   body #nav a::after {
     top: 3.1rem;
   }
 }
-
 body #nav a:hover {
   _text-decoration: underline;
-  color: #ff8f94 !important;
+  color: rgb(255, 143, 148) !important;
 }
-
 body #nav a:hover::after {
   display: block;
   width: 2rem;
-  -webkit-transition: width 0.3s ease-in;
   transition: width 0.3s ease-in;
 }
-
 @media screen and (max-width: 1024px) {
   body #nav i {
     font-size: clamp(1.5rem, 8vw, 2rem);
   }
 }
-
 @media screen and (max-width: 769px) {
   body #nav i {
     font-size: clamp(0.8rem, 8vw, 1.3rem);
   }
 }
-
 body main {
   margin: clamp(4rem, 8vw, 6rem) 0;
   margin-bottom: 0px;
   padding: 50px;
   _margin-left: 50px;
 }
-
 body main #Home #homeContent {
   margin: 2em 0;
   padding: 2em 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  _-webkit-box-align: center;
-  _    -ms-flex-align: center;
-  _        align-items: center;
+  flex-direction: column;
+  _align-items: center;
 }
-
 body main #Home #homeContent #homeContent_fav div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
   gap: 0 4rem;
 }
-
 body main #Home #homeContent #homeContent_fav div i {
   display: inline;
   text-align: center;
@@ -122,14 +91,12 @@ body main #Home #homeContent #homeContent_fav div i {
   padding: 2rem;
   font-size: clamp(2rem, 8vw, 4rem);
 }
-
 @media screen and (max-width: 1024px) {
   body main #Home #homeContent #homeContent_fav div i {
     font-size: clamp(1.5rem, 8vw, 2rem);
     padding: 1.2em;
   }
 }
-
 @media screen and (max-width: 769px) {
   body main #Home #homeContent #homeContent_fav div i {
     font-size: clamp(1rem, 8vw, 1.5rem);
@@ -137,272 +104,178 @@ body main #Home #homeContent #homeContent_fav div i {
     padding: 10px;
   }
 }
-
 @media screen and (max-width: 480px) {
   body main #Home #homeContent #homeContent_fav div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
-
 body main #Blog #blogContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 body main #Blog #blogContent img {
   display: inline;
   max-width: 100%;
   min-height: 100%;
 }
-
 body main #Blog #blogContent div:nth-child(2n) {
   margin-left: auto;
   max-width: 75%;
 }
-
 body main #Blog #blogContent div:nth-child(2n+1) {
   max-width: 75%;
 }
-
 body main #Blog #blogContent p {
   font-weight: bold;
 }
-
 body main #Blog #blogContent p.blogTitle {
   font-size: clamp(1rem, 4vw, 1.5rem);
 }
-
 body main #Blog #blogContent p.blogSignat {
   text-align: right;
 }
-
 body main #Add .form {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 2px;
   width: 100%;
 }
-
 body main #Add .form input,
 body main #Add .form textarea {
   width: 90%;
 }
-
-body main #Add .form input[type='submit'],
-body main #Add .form textarea[type='submit'] {
-  background-color: #ff8f94;
+body main #Add .form input[type=submit],
+body main #Add .form textarea[type=submit] {
+  background-color: rgb(255, 143, 148);
   color: white;
   height: 2rem;
   border: none;
   _border-radius: 10%;
 }
-
 body main #About div.flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 1rem;
 }
-
 body main #About div.flexContainer div {
   max-width: 50%;
-  _-webkit-box-align: center;
-  _    -ms-flex-align: center;
-  _        align-items: center;
+  _align-items: center;
 }
-
 body main #About div.flexContainer div:nth-child(1) img {
   margin-bottom: 1rem;
 }
-
 body main #About div.flexContainer div:nth-child(2) aside {
   margin-bottom: 1rem;
 }
-
 body main #About div.flexContainer div img {
   width: 100%;
 }
-
 body main #About div.flexContainer div:nth-child(2) {
   _margin-left: 10px;
 }
-
 body footer #footerPart1 {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  _-webkit-box-pack: center;
-  _    -ms-flex-pack: center;
-  _        justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  _-ms-flex-line-pack: center;
-  _    align-content: center;
+  _justify-content: center;
+  align-items: center;
+  _align-content: center;
 }
-
 body footer #footerPart1 #contact,
 body footer #footerPart1 #legal {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   _margin: 2em;
 }
-
 body footer #footerPart1 #contact li,
 body footer #footerPart1 #legal li {
   margin: 3em 0;
 }
-
 body footer #footerPart1 #contact li i,
 body footer #footerPart1 #legal li i {
   _height: 50px;
   _width: 50px;
 }
-
 body footer #footerPart1 #contact #legalMentions li,
 body footer #footerPart1 #legal #legalMentions li {
   margin: 2em 0;
 }
-
 body footer #footerPart1 #contact #legalMentions li:first-letter,
 body footer #footerPart1 #legal #legalMentions li:first-letter {
   text-transform: capitalize;
 }
-
 body footer #footerPart1 #contact #legalIcons li,
 body footer #footerPart1 #legal #legalIcons li {
   margin: 3em 0;
   _height: 50px;
   _width: 50px;
 }
-
 body footer #footerPart1 #contact #legalIcons,
 body footer #footerPart1 #legal #legalIcons {
-  _display: -webkit-box;
-  _display: -ms-flexbox;
   _display: flex;
-  _-webkit-box-orient: horizontal;
-  _-webkit-box-direction: normal;
-  _    -ms-flex-direction: row;
-  _        flex-direction: row;
+  _flex-direction: row;
 }
-
 @media screen and (max-width: 481px) {
   body footer #footerPart1 #map {
     display: none !important;
   }
 }
-
 @media screen and (max-width: 1024px) {
   body footer #footerPart1 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   body footer #footerPart1 #contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   body footer #footerPart1 #contact li {
     margin: 0.3px;
   }
   body footer #footerPart1 #legal {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   body footer #footerPart1 #legal ul li {
     margin: 0.3px !important;
   }
 }
-
 body footer a {
   text-decoration: inherit;
   color: black;
 }
-
 body footer a::first-letter {
   text-transform: capitalize;
 }
-
 body footer a:visited {
   _text-decoration: inherit;
   _color: black;
 }
-
 body footer li {
   list-style-type: none;
   _margin: 0 2em;
   _padding: 0 2em;
 }
-
 body #upArrow {
-  _-webkit-box-pack: center;
-  _    -ms-flex-pack: center;
-  _        justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  _justify-content: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
 }
-
 body #upArrow i {
   text-decoration: none;
 }
-
 body #upArrow i:visited {
   text-decoration: none;
   color: black;
 }
-
 body #footerPart2 {
   text-transform: capitalize;
   text-align: center;
 }
-
 body #joinUs,
 body #ourBlog,
 body #addYourArticle,
@@ -411,29 +284,25 @@ body #aboutUs {
   font-size: 3rem;
   width: 100%;
 }
-
 body #joinUs p,
 body #ourBlog p,
 body #addYourArticle p,
 body #aboutUs p {
   font-size: clamp(1.5rem, 3vw, 2.85rem);
-  color: #ff8f94;
+  color: rgb(255, 143, 148);
   text-align: center;
   width: 100%;
   margin-top: 0em;
   margin-bottom: 2em;
 }
-
 body #joinUs p::first-letter,
 body #ourBlog p::first-letter,
 body #addYourArticle p::first-letter,
 body #aboutUs p::first-letter {
   text-transform: capitalize;
 }
-
 body p:not(.pageTitle),
 body div:not(.pageTitle),
 body form {
   font-size: clamp(0.8rem, 2vw, 1.3rem);
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
