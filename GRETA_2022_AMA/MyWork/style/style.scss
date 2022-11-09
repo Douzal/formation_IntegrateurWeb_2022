@@ -75,4 +75,17 @@ body {
             color: $h1color;
         }
     }
+
+    &.ex-DOM {
+        background: yellowgreen;
+        _display: flex;
+
+        .main {
+            padding: 20px 20px 0;
+
+            &__content {
+                font-size: 1.1rem;
+            }
+        }
+    }
 }

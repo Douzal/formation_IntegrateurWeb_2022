@@ -39,4 +39,14 @@ body .section__title {
 }
 body .section__subtitle {
   color: rgba(20, 43, 34, 0.6588235294);
+}
+body.ex-DOM {
+  background: yellowgreen;
+  _display: flex;
+}
+body.ex-DOM .main {
+  padding: 20px 20px 0;
+}
+body.ex-DOM .main__content {
+  font-size: 1.1rem;
 }/*# sourceMappingURL=style.css.map */
