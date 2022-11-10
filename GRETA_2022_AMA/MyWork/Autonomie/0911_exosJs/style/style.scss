@@ -1,0 +1,18 @@
+$simpleBorders :2px solid black;
+$colGreen : rgb(35, 141, 35);
+
+%whiteBorder {
+    border: 1px solid #FFF;
+}
+
+.container {
+    border: $simpleBorders;
+    background-color: $colGreen;
+    margin: 20px;
+    padding: 20px;
+}
+
+.article {
+    // border: $redBorder;
+    @extend %whiteBorder;
+}
