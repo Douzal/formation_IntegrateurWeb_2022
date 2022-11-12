@@ -6,11 +6,16 @@ $(document).ready(() => {
         let articles = document.querySelector('#articles');
         let btn = document.querySelector('#ex1Btn');
         let count = 0;
+
+        if (missingContent(btn, 'ex1') || missingContent(articles, 'ex1')) {
+            return;
+        };
+
         btn.addEventListener('click', () => {
-            console.log('click');
+            resetContent();
             btn.style.visibility = 'hidden';
             count = prompt('Combien d\'articles créer ?', 4);
-            while (count == '' || isNaN(count) || count == null) {
+            while (!isValidInput(count)) {
                 count = prompt('SVP - Combien d\'articles créer ?');
             }
             createArticles(count, articles);
@@ -33,18 +38,27 @@ $(document).ready(() => {
         let magicalNumer = getRandomInt(min, max);
         let count = 1;
 
+        if (missingContent(btn, 'ex2')) {
+            return;
+        };
+
         btn.onclick = () => {
+            resetContent();
             count = 1;
             console.warn(`Ex 2 - Number to guess : ${magicalNumer}`);
             let choice = prompt('Choix d\'un nombre entre ' + min + ' et ' + max);
             while (!isValidNumber(choice, min, max)) {
                 choice = prompt('Nombre svp, et dans l\interval [' + min + ';' + max + ']');
             };
-
+            let savChoice = choice;
             let checkAnswer = evaluateNumber(choice, magicalNumer);
             while (!checkAnswer['trouve']) {
                 alert(checkAnswer['phrase']);
-                choice = prompt('Choix d\'un nombre entre ' + min + ' et ' + max + '\nnb : ' + checkAnswer['phrase'] + ' que ' + choice);
+                choice = prompt('Choix d\'un nombre entre ' + min + ' et ' + max + '\nnb : ' + checkAnswer['phrase'].substring(0, 11) + ' que ' + choice);
+                while (!isValidNumber(choice, min, max)) {
+                    choice = prompt('Nombre svp, et dans l\interval [' + min + ';' + max + ']' + '\nnb : ' + checkAnswer['phrase'].substring(0, 11) + ' que ' + savChoice);
+                };
+                savChoice = choice;
                 checkAnswer = evaluateNumber(choice, magicalNumer);
                 count++;
             }
@@ -63,8 +77,30 @@ $(document).ready(() => {
     ● Quand on re-clique dessus, son texte redevient "Mask List" et la liste réapparaît en-dessous */
     function ex3() {
         let btn = document.getElementById('ex3Btn');
+        let content = document.getElementById('ex3');
+
+        if (missingContent(btn, 'ex3') || (missingContent(content, 'ex3'))) {
+            return;
+        };
+
+        let count = 0;
         btn.onclick = () => {
-            //TODO display ou pas le HTML adéquat à l'exercice
+            resetContent();
+            content.innerHTML = '<ol id="ex3list"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ol>';
+            let ex3List = document.querySelector('#ex3list');
+            count++;
+            if (count % 2 == 0) {
+                btn.innerHTML = 'Display list';
+                // ex3List.style.visibility = 'hidden';
+                ex3List.style.display = 'none';
+
+            } else {
+                btn.innerHTML = 'Mask list';
+                // ex3List.style.visibility = 'visible';
+                ex3List.style.display = 'block';
+                // content.innerHTML = '';
+            }
+
         }
     }
     ex3();
@@ -78,8 +114,45 @@ $(document).ready(() => {
     ● Quand on clique sur le bouton reset, les changements sont annulés */
     function ex4() {
         let btn = document.getElementById('ex4Btn');
-        btn.onclick = () => {
+        let content = document.querySelectorAll('#ex4')[0];
 
+        if (missingContent(btn, 'ex4') || missingContent(content, 'ex4')) {
+            return;
+        };
+
+        btn.onclick = () => {
+            resetContent();
+            let arrBtn = createBtn(3);
+            console.warn(arrBtn);
+            // for (let b in arrBtn) {
+            //     console.log((b));
+            //     content.append(b);
+            // }
+            //content.append(createBtn(3));
+            // let btn = createBtn(1);
+            // console.log(btn);
+            // content.append(btn);
+
+            // create p
+            let p = document.createElement('p');
+            p.style.border = '1px solid white';
+            p.style.height = '200px';
+            p.style.textAlign = 'center';
+            p.style.color = 'white';
+            p.id = 'parEx4';
+            p.style.fontFamily = 'verdana';
+            let baseColor = p.style.backgroundColor;
+            // p.style.justifyContent = 'center';
+            p.textContent = 'Paragraphe généré en javascript';
+            content.append(p);
+
+            let clearBtn = document.createElement('button');
+            clearBtn.innerHTML = 'Reset';
+            clearBtn.onclick = () => {
+                p.textContent = 'Paragraphe généré en javascript';
+                p.style.background = baseColor;
+            }
+            content.append(clearBtn);
         }
     }
     ex4();
@@ -114,8 +187,27 @@ $(document).ready(() => {
 
         }
     }
+    function resetContent() {
+        console.clear();
+        document.querySelector('#articles').innerHTML = '';
+        document.getElementById('ex3').innerHTML = '';
+        document.querySelector('#ex1Btn').style.visibility = 'visible';
+        document.querySelectorAll('#ex4')[0].innerHTML = '';
+    }
+    // returns false if the content exist, else true (+log err)
+    function missingContent(content, numEx) {
+        if (!content) {
+            console.error(`Erreur : ${numEx} impossible à mettre en place`);
+            return true;
+        }
+        return false;
+    }
+    // this functions returns true if value is a number
+    function isValidInput(input) {
+        return !(input == null || isNaN(input) || input.trim() == '');
+    }
     function isValidNumber(choice, min, max) {
-        return !(choice == null || choice.trim() == '' || isNaN(choice) || choice < min || choice > max)
+        return !(!isValidInput(choice) || choice < min || choice > max)
     }
     function evaluateNumber(choice, magicalNumer) {
         if (choice == magicalNumer) {
@@ -125,5 +217,26 @@ $(document).ready(() => {
         } else {
             return { trouve: false, phrase: 'C\'est moins !' };
         }
+    }
+    function createBtn(num) {
+        let arrBtn = [];
+        for (let i = 0; i < num; i++) {
+            let btn = document.createElement('button');
+            btn.innerHTML = 'color ' + i;
+            let rand1 = getRandomInt(0, 255);
+            let rand2 = getRandomInt(0, 255);
+            let rand3 = getRandomInt(0, 255);
+            let col = `RGB(${rand1}, ${rand2}, ${rand3})`;
+            btn.style.background = col;
+            btn.onclick = () => {
+                let p = document.querySelector('#parEx4');
+                p.style.background = col;
+                p.innerHTML = `Paragraphe généré en javascript<br><br>Col : ${col}`
+            }
+            $('#ex4').append(btn);
+            arrBtn.push(btn);
+        }
+        console.log(`arrBtn : ${arrBtn}`);
+        return arrBtn;
     }
 })
