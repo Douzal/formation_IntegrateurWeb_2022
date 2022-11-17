@@ -5,6 +5,10 @@ $colGreen : rgb(35, 141, 35);
     border: 1px solid #FFF;
 }
 
+html {
+    background-color: grey;
+}
+
 .container {
     border: $simpleBorders;
     background-color: $colGreen;
@@ -15,4 +19,13 @@ $colGreen : rgb(35, 141, 35);
 .article {
     // border: $redBorder;
     @extend %whiteBorder;
+}
+
+button {
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
 }

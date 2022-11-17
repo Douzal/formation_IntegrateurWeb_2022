@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM  ||  Form Event</title>
+    <style>
+        input {
+            display: block;
+            margin: 1rem;
+        }
+        .resetConfirm {
+            display: none;
+        }
+        .valid {
+            color: green;
+            border: 2px solid green;
+        }
+        .invalid {
+            color: red;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+
+        <input type="text" placeholder="Name" id="userName"/>
+        <p id="checkUserName"></p>
+        <input type="email" placeholder="Email" id="userMail"/> 
+        <input type="password" placeholder="Password" id="userPassword"/> 
+
+        <input type="color" id="userColor">
+
+        <input type="range" id="userNote">
+
+        <select id="userChoice">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+
+
+        <button type="submit" id="submit">SEND</button>
+        <button type="reset" id="reset">RESET</button>
+
+        <div class="resetConfirm">
+            <p>Do you really want to reset ?</p>
+            <button type="reset">YES</button>
+            <button type="button">NO</button>
+        </div>
+
+
+    </form>
+
+    <script src="4-formEvent.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+body {
+    background-color: #ababab;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#create-btn {
+    padding: 0.6em 1em;
+    font-size: 2rem;
+    border-radius: 0.3em;
+    border: none;
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.blogArticle {
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(69, 69, 69, 0.6);
+    box-shadow: 0 4px 10px rgba(135, 133, 133, 0.6);
+    width: 20rem;
+    margin: 1.5rem;
+}
+
+.blogArticle h2 {
+    font-size: 2.4rem;
+    color: #808080;
+}
+
+.blogArticle p {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.blogArticle img {
+    max-width: 100%;
+}

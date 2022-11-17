@@ -52,6 +52,7 @@ $(document).ready(() => {
             };
             let savChoice = choice;
             let checkAnswer = evaluateNumber(choice, magicalNumer);
+            // console.dir(checkAnswer);
             while (!checkAnswer['trouve']) {
                 alert(checkAnswer['phrase']);
                 choice = prompt('Choix d\'un nombre entre ' + min + ' et ' + max + '\nnb : ' + checkAnswer['phrase'].substring(0, 11) + ' que ' + choice);
