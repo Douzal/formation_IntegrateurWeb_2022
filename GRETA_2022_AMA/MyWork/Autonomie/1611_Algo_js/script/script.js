@@ -1,4 +1,5 @@
-$(document).ready(() => {
+// $(document).ready(() => {
+$(() => {
 
     // EX 1 - Index Of
     /* Créer une fonction qui prend 2 paramètres : un mot et une lettre à trouver dans le mot
@@ -40,7 +41,8 @@ $(document).ready(() => {
         btn.addEventListener('click', () => {
             resetContent();
             let mot = 'mot doux';
-            let finalS = checkFinalS(mot);
+            // let finalS = checkFinalS(mot);
+            let finalS = checkFinalS_ternaire(mot);
             if (finalS == true) {
                 console.warn(`'${mot}' termine par un 's'.`);
             } else {
@@ -53,16 +55,26 @@ $(document).ready(() => {
     // EX 3 - CAPITALIZE WORDS
     function ex3() {
         let btn = document.querySelector('#capitalize');
-        if (missingContent(btn, 'capitalize()')) {
+        let capiForm = document.querySelector('#capiForm');
+        let capiFormSubmit = document.querySelector("#capiForm input[type='submit']");
+        let phraseInput = document.querySelector("#capiForm input[type='text']");
+
+        if (missingContent(phraseInput, 'capitalize()') || missingContent(btn, 'capitalize()') || missingContent(capiFormSubmit, 'capitalize()') || missingContent(capiForm, 'capitalize()')) {
             return;
         };
 
         btn.addEventListener('click', () => {
             resetContent();
-            let phrase = 'unE    pHrAse avEC   plEin de MotS.  ';
+            capiForm.style.display = 'block';
+        });
+
+        capiFormSubmit.onclick = (e) => {
+            e.preventDefault();
+            let phrase = phraseInput.value;
+            phrase ? phrase : phrase = 'unE    pHrAse avEC   plEin de MotS.  ';
             phrase = capitalize(phrase);
             console.log(phrase);
-        });
+        }
     }
     ex3();
 
@@ -125,6 +137,21 @@ $(document).ready(() => {
     }
     ex6();
 
+    function ex7() {
+        let btn = document.querySelector('#addOdds');
+        if (missingContent(btn, 'addOdds()')) {
+            return;
+        };
+
+        btn.addEventListener('click', () => {
+            resetContent();
+            let a = 5, b = 7, c = 10;
+            let sumOdds = addOdds(a, b, c);
+            console.log(`Somme des impars : `, sumOdds);
+        });
+    }
+    ex7();
+
     // SQUELETTE
     // ex1();
     // function ex55() {
@@ -151,6 +178,8 @@ $(document).ready(() => {
         document.getElementById('ex3').innerHTML = '';
         document.querySelector('#ex1Btn').style.visibility = 'visible';
         document.querySelectorAll('#ex4')[0].innerHTML = '';
+        document.querySelector('#capiForm input[type="text"]').value = '';
+        document.querySelector('#capiForm').style.display = 'none';
     }
     // returns false if the content exist, else true (+log err)
     function missingContent(content, numEx) {
@@ -176,6 +205,13 @@ $(document).ready(() => {
         let length = arr.length;
         let lastLetter = arr[length - 1];
         return (lastLetter == 's');
+
+        // en ternaire en une ligne:
+        // mot.slice(-1) === 's'?true:false;
+    }
+    function checkFinalS_ternaire(mot) {
+        // en ternaire en une ligne:
+        mot.slice(-1) === 's' ? true : false;
     }
     function checkPalindrome(mot) {
         mot = mot.toUpperCase();
@@ -197,10 +233,10 @@ $(document).ready(() => {
                 if (j % 5 == 0) {
                     console.error(`FIZZBUZZ (${j})`);
                 } else {
-                    console.warn(`buzz (${j})`);
+                    console.warn(`${j} : fizz`);
                 }
             } else if (j % 5 == 0) {
-                console.warn(`buzz (${j})`);
+                console.warn(`${j} : buzz`);
             } else {
                 console.log(j);
             }
@@ -245,22 +281,27 @@ $(document).ready(() => {
             let newPhrase = '';
             let espace = false;
             for (const lettre of arr) {
-                // n <= 1 ? (newPhrase += lettre) : '';
-                // if(n<=1) {
-                //     newPhrase += lettre;
-                // } else {
-
-                // }
-                if (!espace && lettre == ' ') {
-                    console.error(`${lettre} // newPhrase : ${newPhrase}`);
-                    // n++;
-                    espace = true;
+                if (lettre == ' ') {
+                    if (!espace) {
+                        espace = true;
+                        newPhrase += lettre;
+                    }
+                    // console.error(`${lettre} // newPhrase : ${newPhrase}`);
                 } else {
                     newPhrase += lettre;
                     espace = false;
                 }
             }
+            return newPhrase;
         }
-        return phrase;
+    }
+    function addOdds(...args) {
+        let sum = 0;
+        for (const n of [...args]) {
+            // for (const n of args) { // fonctionne aussi
+            // console.log(`n : ${n} donc n % 2 == 0 ? : ${n % 2 == 0}`);
+            n % 2 == 0 ? '' : sum = sum + n;
+        }
+        return sum;
     }
 })

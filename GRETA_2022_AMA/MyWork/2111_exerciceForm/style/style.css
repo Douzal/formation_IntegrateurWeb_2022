@@ -1,0 +1,58 @@
+/* Mostly for me to practise @mixin, but I need it */
+.body {
+  background-color: aquamarine;
+}
+@media screen and (max-width: 776px) {
+  .body {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+  }
+}
+
+.container {
+  background-color: whitesmoke;
+  margin: 2rem auto;
+  width: 30vw;
+  padding: 1em;
+  border: 1px solid aquamarine;
+  border-radius: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container__label {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  _text-align: right;
+}
+.container__input {
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  width: 29vw;
+  _box-sizing: border-box;
+  height: 1.4rem;
+}
+.container__button {
+  border: 1px solid aquamarine;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 30vw;
+  height: 2.4rem;
+  color: white;
+  background-color: lightpink;
+}
+.container .errMsg {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 2.5rem;
+}
+.container .unvisible {
+  visibility: hidden;
+}
+.container .valid {
+  color: green;
+  border-color: green;
+}
+.container .invalid {
+  color: red;
+  border-color: red;
+}/*# sourceMappingURL=style.css.map */

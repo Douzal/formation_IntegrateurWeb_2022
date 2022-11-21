@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices algo Js</title>
+    <!-- <link rel="shortcut icon" href="../../img/icon_happySandwich.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="../2111_exerciceForm/style/style.css" />
+</head>
+<body class="body">
+    <form class="form container"><!--  action="index.html" method="post" -->
+        <!-- PSEUDO -->
+        <label class="container__label" for="pseudo">Pseudo</label><br>
+        <input class="container__input" type="text" id="pseudo" name="pseudo" /><!-- minlength="3" maxlength="10" --><br>
+        <div class="errMsg unvisible" id="pseudoErr">🔥 doit contenir entre 3 et 10 caractères</div>
+        <!-- EMAIL -->
+        <label class="container__label" for="email">Email</label><br>
+        <input class="container__input" type="email" id="email" name="email" /><br>
+        <div class="errMsg unvisible" id="emailErr">🔥 format non valide</div>
+        <!-- PASSWORD -->
+        <label class="container__label" for="pwd">Password</label><br>
+        <input class="container__input" id="pwd" name="pwd" type="password" minlength="8" ><br>
+        <div class="errMsg unvisible" id="pwdErr">🔥 doit contenir une majuscule et un caractère spécial</div>
+        <!-- CONFIRM PASSWORD -->
+        <label class="container__label" for="chkpwd">Confirm password</label><br>
+        <input class="container__input" id="chkpwd" name="chkpwd" type="password" minlength="8" ><br>
+        <div class="errMsg unvisible" id="chkpwdErr">🔥 mots de passe différents</div>
+        <!-- SUBMIT BTN-->
+        <button class="container__button" type="submit" class="submit">Submit</button>
+    </form>
+
+    <!-- jQuery + mon script-->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script defer src="./script/script.js"></script>
+    <script defer src="../2111_exerciceForm/script/script.js"></script>
+</body>
+</html>

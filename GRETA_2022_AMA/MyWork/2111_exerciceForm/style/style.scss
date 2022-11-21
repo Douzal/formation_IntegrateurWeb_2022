@@ -1,0 +1,89 @@
+$baseColor : aquamarine;
+$whiteColor : whitesmoke;
+$noneBorder : 1px solid $baseColor;
+$simpleBorder : 1px solid black;
+$simpleBorderRadius: 6px;
+
+/* Mostly for me to practise @mixin, but I need it */
+@mixin simpleBorder($col : $baseColor) {
+    border: 1px solid $col;
+}
+
+@mixin basicBorders($col: $baseColor) {
+    @include simpleBorder($col);
+    border-radius: $simpleBorderRadius;
+}
+
+@mixin basicBordersNone {
+    @include simpleBorder(black);
+    border-radius: $simpleBorderRadius;
+}
+
+// general rules
+.body {
+    background-color: $baseColor;
+
+    @media screen and(max-width:776px) {
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+    }
+}
+
+// container
+.container {
+    background-color: $whiteColor;
+    margin: 2rem auto;
+    width: 30vw;
+    padding: 1em;
+    border: $noneBorder;
+    border-radius: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    &__label {
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        _text-align: right;
+    }
+
+    &__input {
+        @include basicBorders($whiteColor);
+        width: 29vw;
+        _box-sizing: border-box;
+        height: 1.4rem;
+        // border: $simpleBorder;
+        // border-radius: $simpleBorderRadius;
+
+    }
+
+    &__button {
+        @include basicBorders();
+        margin-top: 0.3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 30vw;
+        height: 2.4rem;
+        // border: $simpleBorder;
+        // border-radius: $simpleBorderRadius;
+        color: white;
+        background-color: lightpink;
+    }
+
+    .errMsg {
+        color: red;
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .unvisible {
+        visibility: hidden;
+    }
+
+    .valid {
+        color: green;
+        border-color: green;
+    }
+
+    .invalid {
+        color: red;
+        border-color: red;
+    }
+}
