@@ -13,7 +13,7 @@ $(document).ready(function () {
     let validPseudo = false, validEmail = false;
     let validPwd = false, validChkpwd = false;
 
-    // TODO voir s'il faut passer par un objet :
+    // TODO voir si pas mieux de passer par un objet :
     let isValidForm = {
         'validPseudo': false,
         'validEmail': false,
@@ -89,7 +89,6 @@ $(document).ready(function () {
     // returns true if mail is valid false otherwise
     function isValidMail(mail) {
         let regex = /\S+@\S+\.\S+/;
-        // TODO rajouter à la regex les 8 caractères
         // console.warn(`mail : ${mail}`);
         validEmail = regex.test(mail);
         return validEmail;
@@ -115,11 +114,19 @@ $(document).ready(function () {
         . represents any character except line break.
         + represents one or more times.
 */
-        var pattern = new RegExp(
-            "^(?=.*[A-Z])(?=.*[-+_!@#$%^&*.,?]).+$"
+        let patternUppCase = new RegExp(
+            "^(?=.*[A-Z]).+$"
         );
-        // console.warn(pattern.test(mdp));
-        return pattern.test(mdp);
+        let patternSpeCar = new RegExp(
+            "^(?=.*[-+_!@#$%^&*.,?]).+$"
+        );
+        let pattern8min = new RegExp(
+            '^.*(?=.{8,}).*$'
+        );
+        return (patternUppCase.test(mdp)
+            && patternSpeCar.test(mdp)
+            && pattern8min.test(mdp)
+        );
     }
     // returns true if mdp1 == mdp2
     function isValidChkpwd(mdp1, mdp2) {
