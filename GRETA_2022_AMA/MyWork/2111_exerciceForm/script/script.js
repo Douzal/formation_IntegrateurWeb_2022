@@ -89,6 +89,7 @@ $(document).ready(function () {
     // returns true if mail is valid false otherwise
     function isValidMail(mail) {
         let regex = /\S+@\S+\.\S+/;
+        // TODO rajouter à la regex les 8 caractères
         // console.warn(`mail : ${mail}`);
         validEmail = regex.test(mail);
         return validEmail;
