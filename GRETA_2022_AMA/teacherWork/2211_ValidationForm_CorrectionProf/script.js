@@ -11,7 +11,8 @@ const check_data = (value, id) => {
         error_msg = (value.length < 3 || value.length > 10) ? 'doit contenir entre 3 et 10 caractères' : '';
     }
     if (id == 'email') {
-        error_msg = (value.match(/^[\.\w_-]+@[a-z]+\.[a-z]{2,3}$/i) == null) ? 'format non valide' : '';
+        error_msg = (value.match(/^[\.\w_-]+@[a-z]+\.[a-z]{2,3}$/i) == null) ?
+            'format non valide' : '';
     }
     if (id == 'password') {
         // 8 caractères : 1 majuscule et 1 caractère spécial

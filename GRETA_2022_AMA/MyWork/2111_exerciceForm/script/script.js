@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // hide error messages
-    $('.errMsg').toggleClass('unble', true);
+    $('.errMsg').toggleClass('unvisible', true);
 
     // get elements
     let pseudo = document.querySelector('#pseudo'), pseudoErr = document.querySelector('#pseudoErr');
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     /* EVENT LISTENERS */
     // nb : each listener sets the value of validItem (ex : validPseudo, validMail...)
-    pseudo.addEventListener('change', function (e) {
+    pseudo.addEventListener('input', function (e) {
         validPseudo = isValidPseudo(e.target.value);
         if (!validPseudo) {
             pseudoErr.classList.remove('unvisible');
@@ -35,7 +35,7 @@ $(document).ready(function () {
         }
     });
 
-    email.addEventListener('change', function (e) {
+    email.addEventListener('input', function (e) {
         validMail = isValidMail(e.target.value);
         if (!validEmail) {
             emailErr.classList.remove('unvisible'); // allows to make error message appear
@@ -46,7 +46,7 @@ $(document).ready(function () {
         }
     });
 
-    pwd.addEventListener('change', function (e) {
+    pwd.addEventListener('input', function (e) {
         let mdp = e.target.value;
         validPwd = isValidPwd(mdp);
         if (!validPwd) {
@@ -58,7 +58,7 @@ $(document).ready(function () {
         }
     });
 
-    chkpwd.addEventListener('change', function (e) {
+    chkpwd.addEventListener('input', function (e) {
         let chkmdp = e.target.value;
         validChkpwd = isValidChkpwd(pwd.value, chkmdp);
         if (!validChkpwd) {

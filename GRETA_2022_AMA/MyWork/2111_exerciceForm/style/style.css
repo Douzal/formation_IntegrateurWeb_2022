@@ -39,6 +39,11 @@
   color: white;
   background-color: lightpink;
 }
+.container__button:hover {
+  transform: scale(1.05);
+  color: grey;
+  filter: brightness(1.1);
+}
 .container .errMsg {
   color: red;
   font-size: 0.8rem;
